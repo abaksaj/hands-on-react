@@ -6,8 +6,6 @@ const Main = (props) => {
         <main className="Main">{props.children}</main>
 
     );
-
-
 };
 
 export default Main;

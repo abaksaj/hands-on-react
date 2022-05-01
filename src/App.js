@@ -1,9 +1,8 @@
 import './App.scss';
-import Courses from './pages/Courses/Courses';
 import Home from "./pages/Home/Home";
-import Course from "./pages/Course/Course"
-import {Routes, Route} from "react-router-dom"
-
+import Courses from './pages/Courses/Courses';
+import Course from "./pages/Course/Course";
+import {Routes, Route} from "react-router-dom";
 
 
 function App() {
@@ -18,13 +17,10 @@ function App() {
   <Route path="/Course" element={<Course/>} />
   
 
-     </Routes>
+  </Routes>
 
-  
-  
   </>;
    
-}
-
+};
 
 export default App;

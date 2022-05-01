@@ -16,58 +16,67 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
     const buttonLink = useNavigate ();
+
     return (
     <>
-    <Header />
+    <Header
+    
+    />
     <Main>
         
         <section> 
-        
-            <Landing/>
+        <Landing/>
         </section>
+
         <Section
         actionText={"Learn something new"}
         title={"Open new possibilities"}
         buttonText={"More Courses"}
-        buttonLink={() => buttonLink("/Courses")} 
+        buttonLink={() => buttonLink("/Courses")}  
         >
             <Grid> 
 
-            <CourseCard
-                            imgSrc={LectureImg1}
-                            imgAlt={'Introduction'}
-                            title={'1. Introduction'}
-                            subtitle={'60 Minutes'}
-                        />
-                        <CourseCard
-                            imgSrc={LectureImg2}
-                            imgAlt={'HTML & CSS'}
-                            title={'2. HTML & CSS'}
-                            subtitle={'120+ Minutes'}
-                        />
-                        <CourseCard
-                            imgSrc={LectureImg3}
-                            imgAlt={'Version Control System'}
-                            title={'3. Version Control System'}
-                            subtitle={'120+ Minutes'}
-                        />
-                        <CourseCard
-                            imgSrc={LectureImg4}
-                            imgAlt={'Advanced CSS'}
-                            title={'4. Advanced CSS'}
-                            subtitle={'120+ Minutes'}
-                        />
+                <CourseCard
+                     imgSrc={LectureImg1}
+                     imgAlt={'Introduction'}
+                     title={'1. Introduction'}
+                     subtitle={'60 Minutes'}
+                />
+
+                <CourseCard
+                    imgSrc={LectureImg2}
+                    imgAlt={'HTML & CSS'}
+                    title={'2. HTML & CSS'}
+                    subtitle={'120+ Minutes'}
+                />
+                
+                <CourseCard
+                    imgSrc={LectureImg3}
+                    imgAlt={'Version Control System'}
+                    title={'3. Version Control System'}
+                    subtitle={'120+ Minutes'}
+                />
+                
+                <CourseCard
+                    imgSrc={LectureImg4}
+                    imgAlt={'Advanced CSS'}
+                    title={'4. Advanced CSS'}
+                    subtitle={'120+ Minutes'}
+                />
 
             </Grid>
 
         </Section>
+
         <Section isHeadingVisible={false}
-         modifiers={['testimonials']}> <Testimonial/>  </Section>
+         modifiers={['testimonials']}> <Testimonial/>  
+         
+         </Section>
+
     </Main>
         
     </>
     );
-
 
 };
 

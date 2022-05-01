@@ -27,7 +27,7 @@ const SingleCourse = ({ imgSrc, imgAlt }) => {
         tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Massa sed
         elementum tempus egestas sed sed risus pretium quam. Vel risus commodo
         viverra maecenas accumsan. Sit amet risus nullam eget felis eget.
-        Aliquet enim tortor at auctor urna nunc id.
+        Aliquet enim tortor at auctor urna nunc id. 
       </p>
     </div>
   );

@@ -1,16 +1,14 @@
 import React from "react";
-import CourseCard from "../../components/CourseCard/CourseCard";
 import Header from "../../components/Header/Header";
-import Grid from "../../components/Grid/Grid";
 import Main from "../../components/Main/Main";
 import Section from "../../components/Section/Section";
 import LectureImg1 from "../../assets/images/lecture-1.jpg";
 import SingleCourse from "../../components/SingleCourse/SingleCourse";
+import { useNavigate} from "react-router-dom";
 
 
-
-
-const Courses = () => {
+const Course = () => {
+    const alert=useNavigate()
     return (
         <>
         <Header modifiers={['Secondary']} />
@@ -19,35 +17,24 @@ const Courses = () => {
             actionText={"60 + Minutes"}
             title={"1.Introduction"}
             buttonText={"Back"}
+            buttonLink={()=>alert(-1)}
             >
 
-<SingleCourse 
+            <SingleCourse 
             
             imgSrc={LectureImg1}
             imgAlt={"image"}
-
             />
-
-
+            
             </Section>
             
         </Main>
-
-
-
-
-
-        
-        
-        
-        
-        
         </>
     );
 };
     
 
-export default Courses;
+export default Course;
 
 
 

@@ -26,10 +26,10 @@ const Section = ({
     return (
         <section className={sectionClass}>
             <div className="Section-Inner">
-                {actionText && <span className="Section-ActionText">{actionText}</span>}
+                {actionText && <span className="Section-ActionText">{}</span>}
                 {isHeadingVisible && <div className="Section-Heading">
                     {title && <h2 className="Section-Title">{title}</h2>}
-                    {buttonText && <Button onclik={buttonLink} modifiers={['heading', 'outline']}>{buttonText}</Button>}
+                    {buttonText && <Button onClick={()=>buttonLink()} modifiers={['heading', 'outline']}>{buttonText}</Button>}
                 </div>}
                 {children}
             </div>

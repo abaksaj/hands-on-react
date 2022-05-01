@@ -4,6 +4,7 @@ import LogoImg from "../../assets/images/logo.svg"
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 
+
 const Header = ({
     modifiers
 }) => {
@@ -22,9 +23,10 @@ const Header = ({
     return (
     <header className={headerClass}>
            <div className="Header-Inner">
-               <a className="Header-LogoLink"> 
+           <Link to = '/'  className="Header-LogoLink"> 
                    <img className="Header-Logo" src={LogoImg} alt="logo"/>
-               </a>
+            </Link>
+
                <svg className="Header-Hamburger" 
                width="448" 
                height="392" 
@@ -38,9 +40,10 @@ const Header = ({
                    <Link to="/Courses" className="Header-NavLink">Courses</Link>
                    <div className="Header-NavButton">
                        <Button modifiers={['nav']}>Sign in</Button>
-                       </div>
+                    </div>
+
                    <div className="Header-NavButton">
-                     <Button modifiers={['nav', 'secondary']}>Register</Button>
+                     <Button modifiers={['nav', 'secondary']}> Register </Button>
                    
                    </div>
 
@@ -49,9 +52,9 @@ const Header = ({
 
 
 
-        </header> 
-    );
+    </header> 
 
+    );
 
 };
 
