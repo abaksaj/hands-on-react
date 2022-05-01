@@ -10,20 +10,26 @@ import LectureImg3 from '../../assets/images/lecture-3.jpg';
 import LectureImg4 from '../../assets/images/lecture-4.jpg';
 import CourseCard from "../../components/CourseCard/CourseCard";
 import Testimonial from "../../components/Testimonial/Testimonial";
+import { useNavigate } from "react-router-dom";
+
 
 
 const Home = () => {
+    const buttonLink = useNavigate ();
     return (
     <>
     <Header />
     <Main>
+        
         <section> 
-            <Landing />
+        
+            <Landing/>
         </section>
         <Section
         actionText={"Learn something new"}
         title={"Open new possibilities"}
         buttonText={"More Courses"}
+        buttonLink={() => buttonLink("/Courses")} 
         >
             <Grid> 
 

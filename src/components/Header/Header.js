@@ -2,12 +2,27 @@ import React from "react";
 import "../../components/Header/Header.scss"
 import LogoImg from "../../assets/images/logo.svg"
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({
+    modifiers
+}) => {
+    const modifierClasses = {
+        Secondary: 'Header-Secondary',
+    };
+
+    let headerClass = 'Header';
+    
+    if (modifiers){
+        modifiers.forEach(modifier => {
+            headerClass += ' ' + modifierClasses[modifier];
+        });
+    }
+
     return (
-    <header className="Header">
+    <header className={headerClass}>
            <div className="Header-Inner">
-               <a className="Header-logoLink"> 
+               <a className="Header-LogoLink"> 
                    <img className="Header-Logo" src={LogoImg} alt="logo"/>
                </a>
                <svg className="Header-Hamburger" 
@@ -20,7 +35,7 @@ const Header = () => {
                 </svg>
                 
                <nav className="Header-Nav">
-                   <a href="courses.html" className="Header-NavLink">Courses</a>
+                   <Link to="/Courses" className="Header-NavLink">Courses</Link>
                    <div className="Header-NavButton">
                        <Button modifiers={['nav']}>Sign in</Button>
                        </div>
