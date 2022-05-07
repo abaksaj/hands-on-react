@@ -27,6 +27,7 @@ const Courses = () => {
  
             <Grid>
                 <CourseCard 
+                courseId={1}
                 imgSrc={LectureImg1}
                 imgAlt={"Introduction"}
                 title={"1.Introduction"}
@@ -34,6 +35,7 @@ const Courses = () => {
                 />
 
                 <CourseCard 
+                courseId={2}
                 imgSrc={LectureImg2}
                 imgAlt={"HTML & CSS"}
                 title={"2. HTML & CSS"}
@@ -41,6 +43,7 @@ const Courses = () => {
                 />
 
                 <CourseCard 
+                courseId={3}
                 imgSrc={LectureImg3}
                 imgAlt={"Version Control Systems"}
                 title={"3.Version Control Systems "}
@@ -48,6 +51,7 @@ const Courses = () => {
                 />
 
                 <CourseCard 
+                courseId={4}
                 imgSrc={LectureImg4}
                 imgAlt={"Advanced CSS"}
                 title={"4.Advanced CSS"}
@@ -55,13 +59,16 @@ const Courses = () => {
                 />
 
                 <CourseCard 
+                courseId={5}
                 imgSrc={LectureImg5}
                 imgAlt={"JavaScript Basics"}
                 title={"5.JavaScript Basics"}
                 subtitle={"120+ Minutes"}
                 />
 
+
                 <CourseCard 
+                courseId={6}
                 imgSrc={LectureImg6}
                 imgAlt={"Advanced JavaScript"}
                 title={"6.Advanced JavaScript"}
@@ -69,6 +76,7 @@ const Courses = () => {
                 />
 
                 <CourseCard 
+                courseId={7}
                 imgSrc={LectureImg7}
                 imgAlt={"Intro to React"}
                 title={"7.Intro to React"}
@@ -76,6 +84,7 @@ const Courses = () => {
                 />
 
                 <CourseCard 
+                courseId={8}
                 imgSrc={LectureImg8}
                 imgAlt={"React events"}
                 title={"8.React events"}

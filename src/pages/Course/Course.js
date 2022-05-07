@@ -1,13 +1,11 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import Main from "../../components/Main/Main";
 import Section from "../../components/Section/Section";
 import LectureImg1 from "../../assets/images/lecture-1.jpg";
 import SingleCourse from "../../components/SingleCourse/SingleCourse";
 import { useNavigate, useParams} from "react-router-dom";
 import {useState, useEffect} from "react";
-import coursesMock from "../../lib/mock/courses";
-
+import coursesMock from "../../lib/style/mock/courses"
 
 
 const Course = () => {
@@ -23,10 +21,10 @@ const Course = () => {
         courses && setCourse(...courses.filter((course) => course.id === parseInt(id) ));
         }, [courses, id]);
 
-    const alert=useNavigate();
+    const router=useNavigate();
 
     const handleButtonClick = () => {
-
+     router("/") 
     };
 
     return (
@@ -38,9 +36,8 @@ const Course = () => {
             actionText={course.subtitle}
             title={course.title}
             buttonText={"Back"}
-            //how to implement back button at course page? with callbak or useNavigate?
-            callback={handleButtonClick}
-            buttonLink={()=>alert(-1)}
+            onclick={handleButtonClick}
+            navigate={router}
             >
 
             <SingleCourse 
@@ -53,23 +50,6 @@ const Course = () => {
 
         }
 
-        {/* <Main>
-            <Section 
-            actionText={"60 + Minutes"}
-            title={"1.Introduction"}
-            buttonText={"Back"}
-            buttonLink={()=>alert(-1)}
-            >
-
-            <SingleCourse 
-            
-            imgSrc={LectureImg1}
-            imgAlt={"image"}
-            />
-            
-            </Section>
-            
-        </Main> */}
         </>
     );
 };

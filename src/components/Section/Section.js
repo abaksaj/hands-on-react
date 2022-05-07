@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../Button/Button';
 import '../../components/Section/Section.scss';
+import { useNavigate, useParams} from "react-router-dom";
 
 const Section = ({
     modifiers,
@@ -9,7 +10,7 @@ const Section = ({
     buttonText,
     isHeadingVisible = true,
     children,
-    buttonLink
+    onclick,
 }) => {
     const modifierClasses = {
         testimonials: 'Section_testimonials'
@@ -23,13 +24,14 @@ const Section = ({
         });
     }
 
+    
     return (
         <section className={sectionClass}>
             <div className="Section-Inner">
                 {actionText && <span className="Section-ActionText">{}</span>}
                 {isHeadingVisible && <div className="Section-Heading">
                     {title && <h2 className="Section-Title">{title}</h2>}
-                    {buttonText && <Button onClick={()=>buttonLink()} modifiers={['heading', 'outline']}>{buttonText}</Button>}
+                    {buttonText && <Button onclick={onclick} modifiers={['heading', 'outline']}>{buttonText}</Button>}
                 </div>}
                 {children}
             </div>

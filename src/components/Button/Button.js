@@ -1,6 +1,6 @@
 import "../../components/Button/Button.scss";
 
-const Button = ({modifiers, children}) => {
+const Button = ({modifiers, children, onclick}) => {
     const modifierClasses = {
         secondary: 'Button_secondary',
         nav: 'Button_nav',
@@ -15,7 +15,7 @@ const Button = ({modifiers, children}) => {
 
     return (
 
-        <button className={buttonClass}>{children}</button>
+        <button className={buttonClass} onClick={onclick}>{children}</button>
 
     );
 
