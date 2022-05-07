@@ -1,7 +1,6 @@
 import React from "react";
 import CourseCard from "../../components/CourseCard/CourseCard";
 import Header from "../../components/Header/Header";
-import Grid from "../../components/Grid/Grid";
 import Main from "../../components/Main/Main";
 import Section from "../../components/Section/Section";
 import LectureImg1 from "../../assets/images/lecture-1.jpg";
@@ -12,6 +11,7 @@ import LectureImg5 from "../../assets/images/lecture-5.jpg";
 import LectureImg6 from "../../assets/images/lecture-6.jpg";
 import LectureImg7 from "../../assets/images/lecture-7.jpg";
 import LectureImg8 from "../../assets/images/lecture-8.jpg";
+import { Grid } from "../../lib/style/generalStyles";
 
 
 
@@ -19,7 +19,7 @@ import LectureImg8 from "../../assets/images/lecture-8.jpg";
 const Courses = () => {
     return (
         <>
-        <Header modifiers={['Secondary']} />
+        <Header isSecondary={true} />
         <Main>
             <Section 
             actionText={"Learn something new"}
