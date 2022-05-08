@@ -1,4 +1,4 @@
-import "../../components/Button/Button.scss";
+import { ButtonWrapper } from "./ButtonStyle";
 
 const Button = ({modifiers, children, onclick}) => {
     const modifierClasses = {
@@ -15,7 +15,11 @@ const Button = ({modifiers, children, onclick}) => {
 
     return (
 
-        <button className={buttonClass} onClick={onclick}>{children}</button>
+        <ButtonWrapper buttonClass={buttonClass} onClick={onclick}> {children} 
+            {/* <Button className={buttonClass} onClick={onclick}>{children}</Button> */}
+        
+            </ButtonWrapper>
+        // <Button className={buttonClass} onClick={onclick}>{children}</Button>
 
     );
 

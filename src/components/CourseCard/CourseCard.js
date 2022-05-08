@@ -17,7 +17,7 @@ const CourseCard = ({
     return (
         <CourseLink to={`/Course/${courseId}`}>
             <Figure>
-                <Image src={imgSrc} alt={imgAlt} />   
+                <Image src={imgSrc} alt={imgAlt} />
             </Figure>
             <Title>{title}</Title>
             <Subtitle>{subtitle}</Subtitle>

@@ -29,7 +29,6 @@ const Home = () => {
       [],
     );
     
-
     return (
     <>
     <Header />
