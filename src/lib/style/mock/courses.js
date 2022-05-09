@@ -74,4 +74,4 @@ const coursesMock = [
     }
 ];
 
-export default coursesMock;
+ export default coursesMock;
