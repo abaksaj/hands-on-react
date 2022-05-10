@@ -50,8 +50,6 @@ const Courses = () => {
                 />
                 ))}
 
-                
-
             </Grid>
             </Section>
         </Main>

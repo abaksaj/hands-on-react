@@ -9,10 +9,10 @@ import {
     HeaderNavLink,
     LogoLink,
     LogoImg as LogoElement,
-    Hamburger,
     Nav,
     ButtonLink
 } from "./HeaderStyle";
+import Hamburger from "../Hamburger/Hamburger";
 
 
 const Header = ({ isSecondary }) => {
@@ -43,3 +43,5 @@ const Header = ({ isSecondary }) => {
 };
 
 export default Header;
+
+

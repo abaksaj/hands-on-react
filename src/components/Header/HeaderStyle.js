@@ -55,21 +55,7 @@ export const LogoImg = styled.img`
 `;
 
 
-export const Hamburger = styled(HamburgerIcon)`
 
-    width:30px;
-    height: auto;
-
-    @media (${breakpoints.desktop}) {
-        display: none;
-        
-    }
-
-    path {
-        fill: ${colors.BgPrimary};
-        }
-
-`;
 
 
 export const Nav = styled.nav`

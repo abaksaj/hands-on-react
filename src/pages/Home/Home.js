@@ -1,6 +1,5 @@
 import React from "react";
 import {useState, useEffect} from "react";
-
 import Header from "../../components/Header/Header";
 import Landing from "../../components/Landing/Landing";
 import Main from "../../components/Main/Main";
@@ -10,9 +9,6 @@ import Testimonial from "../../components/Testimonial/Testimonial";
 import { useNavigate } from "react-router-dom";
 import { Grid } from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/style/mock/courses";
-
-
-
 
 
 const Home = () => {
