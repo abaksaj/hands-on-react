@@ -3,12 +3,6 @@ import { NavLink, Link } from "react-router-dom";
 import { colors, breakpoints } from "../../lib/style/theme";
 
 export const Section =  styled.section `
-     padding: 60px 24px;
-
-    @media (${breakpoints.desktop}){
-    padding: 120px 0;
-    }
-
     &_testimonials {
     background-color: ${colors.BgSecondary};
     }

@@ -9,13 +9,15 @@ import Testimonial from "../../components/Testimonial/Testimonial";
 import { useNavigate } from "react-router-dom";
 import { Grid } from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/style/mock/courses";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 
 const Home = () => {
     const buttonLink = useNavigate ();
     const [courses, setCourses] = useState(null);
+    const [isSearchDisabled, setIsSearchDisabled] = useState(false);
+    const [inputValue, setInputValue] = useState('');
     
-
     useEffect(() => {
         console.log({courses})
         setTimeout(() => {
@@ -33,7 +35,7 @@ const Home = () => {
         <section> 
         <Landing/>
         </section>
-
+        <SearchBar placeholder="Search..." isSearchDisabled={isSearchDisabled} inputValue={inputValue} setInputValue={setInputValue} />
         <Section
         actionText={"Learn something new"}
         title={"Open new possibilities"}

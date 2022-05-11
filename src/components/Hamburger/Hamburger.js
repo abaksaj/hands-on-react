@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { HamburgerButton } from "./HamburgerStyle";
 import { useNavigate } from "react-router-dom";
+import { ButtonPosition,
+    ButtonPositionInner,
+    HamburgerMenu } from "./HamburgerStyle";
+
 
 function Hamburger() {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
@@ -13,35 +17,32 @@ function Hamburger() {
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          flexDirection: "column",
-        }}
-      >
-        <div style={{ alignSelf: "end" }}>
+
+        <ButtonPosition>
+
+        <ButtonPositionInner>
           <HamburgerButton onClick={() => setShowHamburgerMenu(true)}/>
-        </div>
+        </ButtonPositionInner>
 
         {showHamburgerMenu && (
           <>
-            <div
-              style={{
-                backgroundColor: "#fff",
-                padding: "1rem",
-                borderRadius: "8px",
-              }}
-            >
+            <HamburgerMenu>
               <a onClick={() => changeRoute("/Courses")}>Courses</a> <br />
-              <a>Signin</a> <br />
+              <a>Sign In</a> <br />
               <a>Register</a>
-            </div>
+            </HamburgerMenu>
           </>
-        )}
-      </div>
+            )
+        };
+
+        </ButtonPosition>
+        
+
+
+      
     </>
+  
   );
-}
+};
 
 export default Hamburger;
