@@ -11,7 +11,7 @@ export const SearchContainerPosition = styled.section`
 
 export const SearchContainer  = styled.div`
     position: absolute;
-    margin: 6rem 4rem 0rem 0rem;
+    margin: 10px 10px 1px;
 
 
     

@@ -11,6 +11,7 @@ import Section from "../../components/Section/Section";
 // import LectureImg6 from "../../assets/images/lecture-6.jpg";
 // import LectureImg7 from "../../assets/images/lecture-7.jpg";
 // import LectureImg8 from "../../assets/images/lecture-8.jpg";
+import SearchBar  from '../../components/SearchBar/SearchBar';
 import { Grid } from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/style/mock/courses";
 
@@ -27,6 +28,10 @@ const Courses = () => {
         }
       
     }, [])
+
+    function handleSearch(){
+        console.log("Handle Search");
+    }
     
 
     return (
@@ -52,6 +57,7 @@ const Courses = () => {
 
             </Grid>
             </Section>
+                <SearchBar handleSearch={handleSearch}/>
         </Main>
 
         </>
@@ -59,6 +65,3 @@ const Courses = () => {
 };
 
 export default Courses;
-
-
-

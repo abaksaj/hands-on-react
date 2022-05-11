@@ -1,5 +1,5 @@
 import React from "react";
-import {useState, useEffect} from "react";
+import {useState, useEffect,useMemo} from "react";
 import Header from "../../components/Header/Header";
 import Landing from "../../components/Landing/Landing";
 import Main from "../../components/Main/Main";
@@ -17,7 +17,9 @@ const Home = () => {
     const [courses, setCourses] = useState(null);
     const [isSearchDisabled, setIsSearchDisabled] = useState(false);
     const [inputValue, setInputValue] = useState('');
-    
+    const [searchTerm, setSearch] = useState("");
+
+
     useEffect(() => {
         console.log({courses})
         setTimeout(() => {
@@ -26,6 +28,10 @@ const Home = () => {
       },
       [],
     );
+
+    const handleSearch = (key, val) => {
+        setSearch(val.toLowerCase());
+      };
     
     return (
     <>
@@ -35,7 +41,14 @@ const Home = () => {
         <section> 
         <Landing/>
         </section>
-        <SearchBar placeholder="Search..." isSearchDisabled={isSearchDisabled} inputValue={inputValue} setInputValue={setInputValue} />
+
+        <SearchBar 
+         value={searchTerm}
+         placeholder="Search..."
+         isSearchDisabled={isSearchDisabled} 
+         keyVal={"searchTerm"}
+         handleValues={handleSearch} />
+
         <Section
         actionText={"Learn something new"}
         title={"Open new possibilities"}
@@ -43,24 +56,27 @@ const Home = () => {
         buttonLink={() => buttonLink("/Courses")} 
         > 
 
-        {
-            courses && (
-            <Grid>
-            {
-               courses.map((course, index) => index <= 3 && 
-               <CourseCard
-                    key={course.id}
-                    courseId={course.id}
-                     imgSrc={course.imgSrc}
-                     imgAlt={course.imgAlt}
-                     title={course.title}
-                     subtitle={course.subtitle}
-                /> ) 
-            }
 
-            </Grid> 
-        )}
-
+<Grid>
+     {
+     courses?.filter((course) => {
+        if (searchTerm == null) {
+          return course;
+        } else if (course.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+          return course;
+        }
+     }).map((course) => {
+        return  <CourseCard
+        key={course.id}
+        courseId={course.id}
+         imgSrc={course.imgSrc}
+         imgAlt={course.imgAlt}
+         title={course.title}
+         subtitle={course.subtitle}
+              />
+      })
+         }
+      </Grid>
         </Section>
 
         <Section isHeadingVisible={false}

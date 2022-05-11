@@ -3,20 +3,24 @@ import { useState } from "react";
 import { SearchContainerPosition, SearchContainer, SearchInput } from "./SearchBarStyle";
 
 function SearchBar({
+  value,
   placeholder,
-  inputValue,
-  setInputValue,
   isSearchDisabled,
+  handleValues,
+  keyVal
 }) {
+
+  
+  
   return (
     <>
       <SearchContainerPosition>
         <SearchContainer>
           <SearchInput
+            value={value}
             placeholder={placeholder}
             disabled={isSearchDisabled}
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
+            onChange={(event) =>handleValues(keyVal, event.target.value)}
           />
         </SearchContainer>
       </SearchContainerPosition>
