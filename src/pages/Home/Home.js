@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { Grid } from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/style/mock/courses";
 import SearchBar from "../../components/SearchBar/SearchBar";
-
+import Loader from "../../components/Loader/Loader";
 
 const Home = () => {
     const buttonLink = useNavigate ();
@@ -18,13 +18,16 @@ const Home = () => {
     const [isSearchDisabled, setIsSearchDisabled] = useState(false);
     const [inputValue, setInputValue] = useState('');
     const [searchTerm, setSearch] = useState("");
+    const [loading, setLoading] = useState(true);
 
 
     useEffect(() => {
         console.log({courses})
         setTimeout(() => {
             setCourses(coursesMock);
-        }, 1000);
+            setLoading(false);
+        }, 
+      1000);
       },
       [],
     );
@@ -33,9 +36,12 @@ const Home = () => {
         setSearch(val.toLowerCase());
       };
     
-    return (
-    <>
-    <Header />
+    if(loading===true){
+        return <Loader />
+    }else{
+      return (
+        <>
+          {/* <Header /> */}
     <Main>
         
         <section> 
@@ -85,10 +91,16 @@ const Home = () => {
          </Section>
 
     </Main>
-        
-    </>
-    );
+
+        </>
+      )
+    }
+
+    
 
 };
 
 export default Home;
+
+
+

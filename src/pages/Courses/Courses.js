@@ -14,16 +14,20 @@ import Section from "../../components/Section/Section";
 import SearchBar  from '../../components/SearchBar/SearchBar';
 import { Grid } from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/style/mock/courses";
+import Loader from "../../components/Loader/Loader";
 
 
 
 const Courses = () => {
+    const [loading, setLoading] = useState(true);
     const [allCourses,setAllCourses] = useState();
     useEffect(() => {
         setTimeout(settingCourse,1000)
+        
 
         function settingCourse(){
             setAllCourses(coursesMock);
+            setLoading(false);
 
         }
       
@@ -34,34 +38,39 @@ const Courses = () => {
     }
     
 
-    return (
-        <>
-        <Header isSecondary={true} />
-        <Main>
-            <Section 
-            actionText={"Learn something new"}
-            title={"All Lectures"}>
-                
-            <Grid>
+    if(loading===true){
+        return <Loader />
+    }else{ 
 
-                {allCourses && allCourses.map((item,index)=>(
-
-                <CourseCard 
-                courseId={item.id}
-                imgSrc={item.imgSrc}
-                imgAlt={item.imgAlt}
-                title={item.title}
-                subtitle={item.subtitle}
-                />
-                ))}
-
-            </Grid>
-            </Section>
-                <SearchBar handleSearch={handleSearch}/>
-        </Main>
-
-        </>
-    );
+        return (
+            <>
+            <Header isSecondary={true} />
+            <Main>
+                <Section 
+                actionText={"Learn something new"}
+                title={"All Lectures"}>
+                    
+                <Grid>
+    
+                    {allCourses && allCourses.map((item,index)=>(
+    
+                    <CourseCard 
+                    courseId={item.id}
+                    imgSrc={item.imgSrc}
+                    imgAlt={item.imgAlt}
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    />
+                    ))}
+    
+                </Grid>
+                </Section>
+                    <SearchBar handleSearch={handleSearch}/>
+            </Main>
+    
+            </>
+        );
+        };
 };
 
 export default Courses;
