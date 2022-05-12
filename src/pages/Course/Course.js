@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
-import LectureImg1 from "../../assets/images/lecture-1.jpg";
 import SingleCourse from "../../components/SingleCourse/SingleCourse";
 import { useNavigate, useParams} from "react-router-dom";
 import {useState, useEffect} from "react";

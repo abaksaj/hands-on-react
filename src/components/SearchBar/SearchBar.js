@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { SearchContainerPosition, SearchContainer, SearchInput } from "./SearchBarStyle";
 
 function SearchBar({
@@ -10,7 +9,6 @@ function SearchBar({
   keyVal
 }) {
 
-  
   
   return (
     <>

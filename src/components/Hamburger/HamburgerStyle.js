@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { NavLink, Link } from "react-router-dom";
 import { colors, breakpoints } from "../../lib/style/theme";
 import {ReactComponent as HamburgerIcon} from "../../assets/images/icon-hamburger.svg";
 

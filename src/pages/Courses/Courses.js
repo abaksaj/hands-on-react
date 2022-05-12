@@ -3,19 +3,10 @@ import CourseCard from "../../components/CourseCard/CourseCard";
 import Header from "../../components/Header/Header";
 import Main from "../../components/Main/Main";
 import Section from "../../components/Section/Section";
-// import LectureImg1 from "../../assets/images/lecture-1.jpg";
-// import LectureImg2 from "../../assets/images/lecture-2.jpg";
-// import LectureImg3 from "../../assets/images/lecture-3.jpg";
-// import LectureImg4 from "../../assets/images/lecture-4.jpg";
-// import LectureImg5 from "../../assets/images/lecture-5.jpg";
-// import LectureImg6 from "../../assets/images/lecture-6.jpg";
-// import LectureImg7 from "../../assets/images/lecture-7.jpg";
-// import LectureImg8 from "../../assets/images/lecture-8.jpg";
 import SearchBar  from '../../components/SearchBar/SearchBar';
 import { Grid } from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/style/mock/courses";
-import Loader from "../../components/Loader/Loader";
-
+import Loading from "../../components/Loader/Loading";
 
 
 const Courses = () => {
@@ -39,7 +30,7 @@ const Courses = () => {
     
 
     if(loading===true){
-        return <Loader />
+        return <Loading />
     }else{ 
 
         return (
@@ -52,7 +43,7 @@ const Courses = () => {
                     
                 <Grid>
     
-                    {allCourses && allCourses.map((item,index)=>(
+                    {allCourses && allCourses.map((item)=>(
     
                     <CourseCard 
                     courseId={item.id}

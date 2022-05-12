@@ -23,7 +23,7 @@ export const SectionInner =  styled.div`
 
 export const SectionActionText =  styled.span`
     display: block;
-    color: $colorPrimary;
+    color: ${colors.Primary};
     font-weight: 500;
     margin-bottom: 24px;
 `;

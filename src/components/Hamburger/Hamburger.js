@@ -2,8 +2,8 @@ import { useState } from "react";
 import { HamburgerButton } from "./HamburgerStyle";
 import { useNavigate } from "react-router-dom";
 import { ButtonPosition,
-    ButtonPositionInner,
-    HamburgerMenu } from "./HamburgerStyle";
+        ButtonPositionInner,
+        HamburgerMenu } from "./HamburgerStyle";
 
 
 function Hamburger() {
@@ -19,7 +19,6 @@ function Hamburger() {
     <>
 
         <ButtonPosition>
-
         <ButtonPositionInner>
           <HamburgerButton onClick={() => setShowHamburgerMenu(true)}/>
         </ButtonPositionInner>

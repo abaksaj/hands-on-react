@@ -1,6 +1,5 @@
 import React from "react";
-import {useState, useEffect,useMemo} from "react";
-import Header from "../../components/Header/Header";
+import {useState, useEffect} from "react";
 import Landing from "../../components/Landing/Landing";
 import Main from "../../components/Main/Main";
 import Section from "../../components/Section/Section";
@@ -10,7 +9,8 @@ import { useNavigate } from "react-router-dom";
 import { Grid } from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/style/mock/courses";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import Loader from "../../components/Loader/Loader";
+import Loading from "../../components/Loader/Loading";
+
 
 const Home = () => {
     const buttonLink = useNavigate ();
@@ -37,11 +37,11 @@ const Home = () => {
       };
     
     if(loading===true){
-        return <Loader />
+        return <Loading />
     }else{
       return (
         <>
-          {/* <Header /> */}
+          
     <Main>
         
         <section> 
