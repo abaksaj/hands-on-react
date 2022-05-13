@@ -13,7 +13,7 @@ import {
 import Hamburger from "../Hamburger/Hamburger";
 
 
-const Header = ({ isSecondary }) => {
+const Header = ({isSecondary}) => {
 
     return (
 
@@ -26,18 +26,16 @@ const Header = ({ isSecondary }) => {
                 <Nav>
                     <HeaderNavLink to="/Courses">Courses</HeaderNavLink>
                     <ButtonLink to = '/'>
-                        <Button modifiers={['nav']}>Sign in</Button> 
+                        <Button isNav>Sign in</Button> 
                     </ButtonLink>
                     <ButtonLink to = '/'>
-                        <Button modifiers={['nav', 'secondary']}> Register </Button>
+                        <Button isNav isSecondary>Register</Button>
                     </ButtonLink>
                 </Nav>
             </HeaderInner>
         </HeaderWrapper>
 
     );
-    
-   
 };
 
 export default Header;

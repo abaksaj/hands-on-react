@@ -21,13 +21,11 @@ const Courses = () => {
             setLoading(false);
 
         }
-      
     }, [])
 
     function handleSearch(){
         console.log("Handle Search");
     }
-    
 
     if(loading===true){
         return <Loading />
@@ -38,7 +36,6 @@ const Courses = () => {
             <Header isSecondary={true} />
             <Main>
                 <Section 
-                actionText={"Learn something new"}
                 title={"All Lectures"}>
                     
                 <Grid>

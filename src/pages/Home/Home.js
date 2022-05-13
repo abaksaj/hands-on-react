@@ -27,7 +27,7 @@ const Home = () => {
             setCourses(coursesMock);
             setLoading(false);
         }, 
-      1000);
+      4000);
       },
       [],
     );
@@ -36,9 +36,7 @@ const Home = () => {
         setSearch(val.toLowerCase());
       };
     
-    if(loading===true){
-        return <Loading />
-    }else{
+    
       return (
         <>
           
@@ -62,7 +60,7 @@ const Home = () => {
         buttonLink={() => buttonLink("/Courses")} 
         > 
 
-
+{courses ? "korsevi učitani" : <Loading/>}
 <Grid>
      {
      courses?.filter((course) => {
@@ -94,10 +92,6 @@ const Home = () => {
 
         </>
       )
-    }
-
-    
-
 };
 
 export default Home;

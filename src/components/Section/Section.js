@@ -17,7 +17,7 @@ const Section = ({
     buttonText,
     isHeadingVisible = true,
     children,
-    onclick,
+    onClick,
 }) => {
     const modifierClasses = {
         testimonials: 'Section_testimonials'
@@ -36,14 +36,13 @@ const Section = ({
 
         <SectionWrapper sectionClass={sectionClass}>
             <SectionInner>
-
-            {actionText && <SectionActionText>{}</SectionActionText> }
-            {isHeadingVisible && <SectionHeading /> }
-            {title && <SectionTitle>{title}</SectionTitle> }
-            {buttonText && <Button onclick={onclick} modifiers={['heading', 'outline']}>{buttonText}</Button>}
-            </SectionInner>
+            {actionText && <SectionActionText>{actionText}</SectionActionText> }
+            {isHeadingVisible && <SectionHeading>
+                {title && <SectionTitle>{title}</SectionTitle> }
+                {buttonText && <Button onClick={onClick} isHeading isOutline>{buttonText}</Button>}
+            </SectionHeading>}
             {children}
-
+            </SectionInner>
         </SectionWrapper>
 
     );

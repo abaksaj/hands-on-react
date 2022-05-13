@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { colors, fonts, breakpoints } from "../../lib/style/theme";
 
 
- export const ButtonWrapper = styled.button`
+ export const Button = styled.button`
     border: none;
     display: inline-flex;
     height: 48px;
@@ -16,26 +16,35 @@ import { colors, fonts, breakpoints } from "../../lib/style/theme";
     border-radius: 30px;
     font-weight: 500;
     text-transform: uppercase;
+    
     &:hover {
         transition: all 0.3s ease-in-out;
         filter: drop-shadow(0 3px 3px ${colors.TextPrimary});
     }
-    &_nav {
+
+    ${props => props.isNav && `
         width: 150px;
         &:hover {
             transition: all 0.3s ease-in-out;
             filter: drop-shadow(0 3px 3px ${colors.TextPrimary});
-        }
+        }`
     }
-    &_secondary {
+    
+    ${props => props.isSecondary && `
         background: ${colors.Primary};
-        color: ${colors.Secondary};
+        color: ${colors.Secondary}; `
     }
-    &_outline {
-        border: 1px solid ${colors.Primary};
+
+    ${props => props.isOutline && `
+        border: 1px solid ${colors.Primary};`
     }
-    &_heading {
-        width: 200px;
+
+    ${props => props.isHeading  && `
+        width: 200px;  `
+    }
+
+    ${props => props.isLanding  && `
+        width: 220px;  `
     }
 
 `;

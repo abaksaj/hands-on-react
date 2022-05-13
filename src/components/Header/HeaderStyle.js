@@ -15,7 +15,6 @@ export const Header = styled.header `
     
     background-color: ${colors.TextPrimary};
     position: initial;
-
     `}
 
     @media (${breakpoints.desktop}) {
@@ -23,7 +22,6 @@ export const Header = styled.header `
     }
 
 `;
-
 
 export const HeaderInner = styled.div `
 
@@ -55,9 +53,6 @@ export const LogoImg = styled.img`
 `;
 
 
-
-
-
 export const Nav = styled.nav`
 
     display: none;
@@ -78,7 +73,6 @@ margin-right: 48px;
 &:hover {
      text-decoration: underline;
     }
-    
 `;
 
 

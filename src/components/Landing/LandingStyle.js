@@ -56,8 +56,8 @@ export const LandingContent = styled.div `
 `;
 
 export const LandingContentInner = styled.div `
-    
-    margin: 0 auto;
+      margin: 0 auto;
+      
       @media screen and (${breakpoints.tabletSmall}) {
         width: 450px;
       }

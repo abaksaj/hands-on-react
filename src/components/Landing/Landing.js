@@ -18,7 +18,7 @@ const Landing = () => {
   return (
     <LandingWrapper >
       <Figure >
-        <LandingImage src={LandingImg} alt="Landing"/> </Figure>
+        <LandingImage src={LandingImg} alt="Landing"/></Figure>
         <LandingOverlay>
           <LandingOverlayPrimary />
           <LandingOverlaySecondary />
@@ -29,13 +29,10 @@ const Landing = () => {
           <LandingSubtitle> Make a turnaround in your career or upgrade your current skill set
              with knowledge-based lessons from IT practice. </LandingSubtitle>
           <Link to="/Courses">
-          <Button modifiers={["landing"]}>Explore Courses</Button>
+          <Button isLanding>Explore Courses</Button>
           </Link>
-
         </LandingContentInner>
-
         </LandingContent>
-
     </LandingWrapper>
     
   );

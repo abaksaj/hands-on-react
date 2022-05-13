@@ -63,11 +63,11 @@ export const Image = styled.img `
 export const Title = styled.h3 `
 
     font-size: 20px;
-        font-weight: 500;
-        color: ${colors.TextPrimary};
-        text-align: center;
-        margin-bottom: 8px;
-        transition: color 0.3s ease-out;
+    font-weight: 500;
+    color: ${colors.TextPrimary};
+    text-align: center;
+    margin-bottom: 8px;
+    transition: color 0.3s ease-out;
 
 `;
 

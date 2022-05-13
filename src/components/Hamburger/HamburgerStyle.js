@@ -3,16 +3,13 @@ import { colors, breakpoints } from "../../lib/style/theme";
 import {ReactComponent as HamburgerIcon} from "../../assets/images/icon-hamburger.svg";
 
 export const ButtonPosition = styled.div`
-
     display: flex;
     justify-content: flex-end;
     flex-Direction: column;
-
 `;
 
 
 export const  ButtonPositionInner = styled.div`
-
     align-Self: end;
 
 `;
@@ -43,9 +40,6 @@ export const HamburgerButton = styled(HamburgerIcon)`
     path {
         fill: ${colors.BgPrimary};
         }
-
-
-
 `;
 
 
