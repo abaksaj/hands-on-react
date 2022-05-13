@@ -4,8 +4,7 @@ import Section from "../../components/Section/Section";
 import SingleCourse from "../../components/SingleCourse/SingleCourse";
 import { useNavigate, useParams} from "react-router-dom";
 import {useState, useEffect} from "react";
-import coursesMock from "../../lib/style/mock/courses"
-
+import coursesMock from "../../lib/style/mock/courses";
 
 const Course = () => {
     const {id} = useParams();
@@ -21,7 +20,6 @@ const Course = () => {
         }, [courses, id]);
 
     const router=useNavigate();
-
     const handleButtonClick = () => {
      router("/") 
     };
@@ -29,31 +27,26 @@ const Course = () => {
     return (
         <>
         <Header isSecondary={true} />
-
         {course && (
             <Section 
             actionText={course.subtitle}
             title={course.title}
             buttonText={"Back"}
-            onclick={handleButtonClick}
+            onClick={handleButtonClick}
             navigate={router}
             >
 
             <SingleCourse 
-            
             imgSrc={course.imgSrc}
             imgAlt={course.imgAlt}
             />
-            
-            </Section>)
-
+            </Section>
+            )
         }
-
         </>
     );
 };
     
-
 export default Course;
 
 

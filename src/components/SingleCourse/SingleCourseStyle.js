@@ -1,15 +1,12 @@
 import styled from "styled-components";
 import { colors, breakpoints } from "../../lib/style/theme";
 
-
 export const SingleCourse =  styled.div `
     @media (${breakpoints.tablet}) {
-            display: flex;
-            justify-content: space-between;
-        
+        display: flex;
+        justify-content: space-between;
     }
 `;
-
 
 export const SingleCourseFigure =  styled.figure `
     width: 100%;
@@ -19,16 +16,15 @@ export const SingleCourseFigure =  styled.figure `
     margin-bottom: 32px;
 
         @media (${breakpoints.desktopLarge} ) {
-                width: 450px;
-                height: 450px;
+            width: 450px;
+            height: 450px;
         }
-
+        
         @media (${breakpoints.tablet}) {
             width: 350px;
             height: 350px;
             margin-bottom: 0;
-            flex-shrink: 0;
-        
+            flex-shrink: 0; 
         } 
 `;
 
@@ -55,8 +51,6 @@ export const SingleCourseText  =  styled.p `
                 padding-left: 64px;
                 
         }
-    
-    
 `;
 
 

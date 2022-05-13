@@ -5,16 +5,12 @@ export const SearchContainerPosition = styled.section`
 
     display: flex; 
     justify-content: flex-end;
-
-
 `;
 
 export const SearchContainer  = styled.div`
     position: absolute;
     margin: 10px 10px 1px;
 
-
-    
     @media (${breakpoints.mobileLarge}) {
             padding: 0px, 15px;
             margin-bottom: 40px;
@@ -50,10 +46,7 @@ export const SearchContainer  = styled.div`
         padding: 0px, 0px;
         display: inline-block;
     }
-
 `;
-
-
 
 export const SearchInput  = styled.input`
 
@@ -112,7 +105,6 @@ export const SearchInput  = styled.input`
         outline: none;
         font-size: 16px;
     }
-
 `; 
 
 

@@ -3,23 +3,20 @@ import { NavLink, Link } from "react-router-dom";
 import { colors, breakpoints } from "../../lib/style/theme";
 
 export const Section =  styled.section `
-    &_testimonials {
-    background-color: ${colors.BgSecondary};
+    ${props => props.isTestimonials && `
+        background-color: ${colors.BgSecondary};`
     }
 `;
 
 export const SectionInner =  styled.div`
     @media (${breakpoints.desktop}){
-            width: 960px;
-            margin: 0 auto;
+        width: 960px;
+        margin: 0 auto;
         }
-
     @media (${breakpoints.desktopLarge}){
-            width: 1260px;
+        width: 1260px;
     }
 `;
-
-
 
 export const SectionActionText =  styled.span`
     display: block;
@@ -30,20 +27,19 @@ export const SectionActionText =  styled.span`
 
 export const SectionHeading =  styled.div`
     margin-bottom: 64px;
-
     @media (${breakpoints.tablet}){
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+    }
 `;
 
 export const SectionTitle =  styled.h2`
     
     color: ${colors.TextPrimary};
-        font-size: 26px;
-        font-weight: 500;
-        margin-bottom: 32px;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 32px;
 
         @media (${breakpoints.tablet}){
             font-size: 32px;
@@ -53,7 +49,6 @@ export const SectionTitle =  styled.h2`
         @media (${breakpoints.desktop}){
             font-size: 36px;
         }
-
 `;
 
 

@@ -77,7 +77,6 @@ export const Subtitle = styled.sub `
     font-weight: 300;
     color: ${colors.TextSecondary};
     text-align: center;
-
 `;
 
 

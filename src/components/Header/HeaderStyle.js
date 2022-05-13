@@ -20,25 +20,20 @@ export const Header = styled.header `
     @media (${breakpoints.desktop}) {
         padding: 32px 0;
     }
-
 `;
 
 export const HeaderInner = styled.div `
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @media (${breakpoints.desktop}) {
-        
         width: 960px;
         margin: 0 auto;
         padding: 32px 0;
-
     }
 
     @media (${breakpoints.desktopLarge}) {
-    
         width: 1260px;
     }
 
@@ -47,21 +42,17 @@ export const HeaderInner = styled.div `
 export const LogoLink = styled(Link)``;
 
 export const LogoImg = styled.img`
-
     width: 140px;
-
 `;
 
 
 export const Nav = styled.nav`
-
     display: none;
 
     @media (${breakpoints.desktop}) {
         
         display: block;
     }
-
 `;
 
 export const HeaderNavLink = styled(NavLink)`
@@ -75,17 +66,13 @@ margin-right: 48px;
     }
 `;
 
-
 export const ButtonLink = styled(Link)`
-
     margin-right: 24px;
     display: inline-block;
     
     &:last-child {
         margin-right: 0;
-    
     }
-
 `;
 
 

@@ -15,9 +15,7 @@ import Loading from "../../components/Loader/Loading";
 const Home = () => {
     const buttonLink = useNavigate ();
     const [courses, setCourses] = useState(null);
-    const [isSearchDisabled, setIsSearchDisabled] = useState(false);
     const [inputValue, setInputValue] = useState('');
-    const [searchTerm, setSearch] = useState("");
     const [loading, setLoading] = useState(true);
 
 
@@ -32,27 +30,16 @@ const Home = () => {
       [],
     );
 
-    const handleSearch = (key, val) => {
-        setSearch(val.toLowerCase());
-      };
+    
     
     
       return (
         <>
           
     <Main>
-        
         <section> 
         <Landing/>
         </section>
-
-        <SearchBar 
-         value={searchTerm}
-         placeholder="Search..."
-         isSearchDisabled={isSearchDisabled} 
-         keyVal={"searchTerm"}
-         handleValues={handleSearch} />
-
         <Section
         actionText={"Learn something new"}
         title={"Open new possibilities"}
@@ -62,14 +49,8 @@ const Home = () => {
 
 {courses ? "korsevi učitani" : <Loading/>}
 <Grid>
-     {
-     courses?.filter((course) => {
-        if (searchTerm == null) {
-          return course;
-        } else if (course.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-          return course;
-        }
-     }).map((course) => {
+     
+     {courses && courses.map((course) => {
         return  <CourseCard
         key={course.id}
         courseId={course.id}
@@ -83,8 +64,7 @@ const Home = () => {
       </Grid>
         </Section>
 
-        <Section isHeadingVisible={false}
-         modifiers={['testimonials']}> <Testimonial/>  
+        <Section isHeadingVisible={false} isTestimonials> <Testimonial/>  
          
          </Section>
 

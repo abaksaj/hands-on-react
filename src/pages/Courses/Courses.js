@@ -11,6 +11,14 @@ import Loading from "../../components/Loader/Loading";
 
 const Courses = () => {
     const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearch] = useState("");
+    const [isSearchDisabled, setIsSearchDisabled] = useState(false);
+    const [courses, setCourses] = useState(null);
+    const handleSearch = (key, val) => {
+        setSearch(val.toLowerCase());
+      };
+
+
     const [allCourses,setAllCourses] = useState();
     useEffect(() => {
         setTimeout(settingCourse,1000)
@@ -23,9 +31,7 @@ const Courses = () => {
         }
     }, [])
 
-    function handleSearch(){
-        console.log("Handle Search");
-    }
+    
 
     if(loading===true){
         return <Loading />
@@ -35,12 +41,25 @@ const Courses = () => {
             <>
             <Header isSecondary={true} />
             <Main>
+            <SearchBar 
+         value={searchTerm}
+         placeholder="Search..."
+         isSearchDisabled={isSearchDisabled} 
+         keyVal={"searchTerm"}
+         handleValues={handleSearch} />
                 <Section 
                 title={"All Lectures"}>
                     
                 <Grid>
     
-                    {allCourses && allCourses.map((item)=>(
+                {
+                 allCourses?.filter((course) => {
+        if (searchTerm == null) {
+          return course;
+        } else if (course.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+          return course;
+        }
+     }).map((item)=>(
     
                     <CourseCard 
                     courseId={item.id}
@@ -53,7 +72,6 @@ const Courses = () => {
     
                 </Grid>
                 </Section>
-                    <SearchBar handleSearch={handleSearch}/>
             </Main>
     
             </>

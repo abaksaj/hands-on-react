@@ -21,7 +21,6 @@ export const TestimonialImg =  styled.img `
     object-fit: cover;
 `;
 
-
 export const TestimonialContent =  styled.div `
     padding-left: 120px;
 `;

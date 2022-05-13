@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   SingleCourse as SingleCourseWrapper,
   SingleCourseFigure,
@@ -8,15 +7,12 @@ import {
 
 } from "./SingleCourseStyle";
 
-
-
 const SingleCourse = ({ imgSrc, imgAlt }) => {
   return (
     <SingleCourseWrapper>
       <SingleCourseFigure> 
         <SingleCourseImg src={imgSrc} alt={imgAlt} />
       </SingleCourseFigure>
-
       <SingleCourseText> 
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Et tortor at risus
@@ -43,5 +39,4 @@ const SingleCourse = ({ imgSrc, imgAlt }) => {
 
   );
 };
-
 export default SingleCourse;

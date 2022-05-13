@@ -11,7 +11,6 @@ export const Figure = styled.figure`
     height: 100%;
 `;
 
-
 export const LandingImage = styled.img `
     width: 100%;
     height: 100%;
@@ -43,7 +42,6 @@ export const LandingOverlaySecondary = styled.div `
 `;
 
 export const LandingContent = styled.div `
-    
     position: absolute;
     top: 0;
     left: calc((100% - 1260px) / 2);
@@ -73,11 +71,9 @@ export const LandingContentInner = styled.div `
       @media screen and (${breakpoints.desktopLarge}) {
         width: 1280px;
       }
-
 `;
 
 export const LandingTitle = styled.h1 `
-    
     font-size: 48px;
     width: 300px;
     color: ${colors.BgPrimary};
@@ -87,12 +83,10 @@ export const LandingTitle = styled.h1 `
         width: 450px;
         font-size: 56px;
       }
-
 `;
 
 
 export const LandingSubtitle = styled.p `
-    
     font-size: 16px;
     line-height: 180%;
     color: ${colors.BgPrimary};
@@ -102,7 +96,6 @@ export const LandingSubtitle = styled.p `
       @media screen and (${breakpoints.tabletSmall}) {
         font-size: 18px;
       }
-
 `;
 
 
