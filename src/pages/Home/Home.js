@@ -8,7 +8,6 @@ import Testimonial from "../../components/Testimonial/Testimonial";
 import { useNavigate } from "react-router-dom";
 import { Grid } from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/style/mock/courses";
-import SearchBar from "../../components/SearchBar/SearchBar";
 import Loading from "../../components/Loader/Loading";
 
 
@@ -30,12 +29,8 @@ const Home = () => {
       [],
     );
 
-    
-    
-    
       return (
-        <>
-          
+        <>   
     <Main>
         <section> 
         <Landing/>
@@ -58,18 +53,14 @@ const Home = () => {
          imgAlt={course.imgAlt}
          title={course.title}
          subtitle={course.subtitle}
-              />
+          />
       })
          }
       </Grid>
         </Section>
-
         <Section isHeadingVisible={false} isTestimonials> <Testimonial/>  
-         
          </Section>
-
     </Main>
-
         </>
       )
 };

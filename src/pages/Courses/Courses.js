@@ -14,50 +14,41 @@ const Courses = () => {
     const [searchTerm, setSearch] = useState("");
     const [isSearchDisabled, setIsSearchDisabled] = useState(false);
     const [courses, setCourses] = useState(null);
+
     const handleSearch = (key, val) => {
         setSearch(val.toLowerCase());
-      };
-
+    };
 
     const [allCourses,setAllCourses] = useState();
     useEffect(() => {
         setTimeout(settingCourse,1000)
         
-
         function settingCourse(){
             setAllCourses(coursesMock);
             setLoading(false);
-
         }
     }, [])
-
-    
-
-    if(loading===true){
-        return <Loading />
-    }else{ 
 
         return (
             <>
             <Header isSecondary={true} />
             <Main>
             <SearchBar 
-         value={searchTerm}
-         placeholder="Search..."
-         isSearchDisabled={isSearchDisabled} 
-         keyVal={"searchTerm"}
-         handleValues={handleSearch} />
+                value={searchTerm}
+                placeholder="Search..."
+                isSearchDisabled={isSearchDisabled} 
+                keyVal={"searchTerm"}
+                handleValues={handleSearch} />
                 <Section 
                 title={"All Lectures"}>
-                    
-                <Grid>
-    
-                {
-                 allCourses?.filter((course) => {
-        if (searchTerm == null) {
-          return course;
-        } else if (course.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-          return course;
+
+            {allCourses ? "korsevi učitani" : <Loading/>}     
+            <Grid>
+            {allCourses?.filter((course) => {
+            if (searchTerm == null) {
+                return course;
+            } else if (course.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+                return course;
         }
      }).map((item)=>(
     
@@ -73,10 +64,9 @@ const Courses = () => {
                 </Grid>
                 </Section>
             </Main>
-    
             </>
         );
-        };
-};
+    };
+
 
 export default Courses;
