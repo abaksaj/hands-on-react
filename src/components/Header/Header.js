@@ -12,11 +12,8 @@ import {
 } from "./HeaderStyle";
 import Hamburger from "../Hamburger/Hamburger";
 
-
 const Header = ({isSecondary}) => {
-
     return (
-
         <HeaderWrapper isSecondary={isSecondary}>
             <HeaderInner>
                 <LogoLink to = '/'>
@@ -25,16 +22,15 @@ const Header = ({isSecondary}) => {
                 <Hamburger />
                 <Nav>
                     <HeaderNavLink to="/Courses">Courses</HeaderNavLink>
-                    <ButtonLink to = '/'>
-                        <Button isNav>Sign in</Button> 
+                    <ButtonLink to = "/Sign-in">
+                        <Button isNav>Sign in </Button>
                     </ButtonLink>
-                    <ButtonLink to = '/'>
+                    <ButtonLink to = "/Register">
                         <Button isNav isSecondary>Register</Button>
                     </ButtonLink>
                 </Nav>
             </HeaderInner>
         </HeaderWrapper>
-
     );
 };
 

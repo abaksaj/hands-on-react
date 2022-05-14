@@ -47,7 +47,6 @@ export const Figure = styled.figure `
         @media (${breakpoints.desktopLarge}){
             height: 255px;
         }
-
 `;
 
 

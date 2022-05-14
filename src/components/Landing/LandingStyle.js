@@ -54,48 +54,47 @@ export const LandingContent = styled.div `
 `;
 
 export const LandingContentInner = styled.div `
-      margin: 0 auto;
+  margin: 0 auto;
       
-      @media screen and (${breakpoints.tabletSmall}) {
-        width: 450px;
-      }
+    @media screen and (${breakpoints.tabletSmall}) {
+      width: 450px;
+    }
   
-      @media screen and (${breakpoints.tablet}) {
-        width: 550px;
-      }
+    @media screen and (${breakpoints.tablet}) {
+      width: 550px;
+    }
   
-      @media screen and (${breakpoints.desktop}) {
-        width: 960px;
-      }
+    @media screen and (${breakpoints.desktop}) {
+      width: 960px;
+    }
   
-      @media screen and (${breakpoints.desktopLarge}) {
-        width: 1280px;
-      }
+    @media screen and (${breakpoints.desktopLarge}) {
+      width: 1280px;
+    }
 `;
 
 export const LandingTitle = styled.h1 `
-    font-size: 48px;
-    width: 300px;
-    color: ${colors.BgPrimary};
-    margin-bottom: 24px;
+  font-size: 48px;
+  width: 300px;
+  color: ${colors.BgPrimary};
+  margin-bottom: 24px;
   
-      @media screen and (${breakpoints.tabletSmall}) {
-        width: 450px;
-        font-size: 56px;
-      }
+  @media screen and (${breakpoints.tabletSmall}) {
+    width: 450px;
+    font-size: 56px;
+  }
 `;
 
-
 export const LandingSubtitle = styled.p `
-    font-size: 16px;
-    line-height: 180%;
-    color: ${colors.BgPrimary};
-    width: 300px;
-    margin-bottom: 48px;
+  font-size: 16px;
+  line-height: 180%;
+  color: ${colors.BgPrimary};
+  width: 300px;
+  margin-bottom: 48px;
   
-      @media screen and (${breakpoints.tabletSmall}) {
+  @media screen and (${breakpoints.tabletSmall}) {
         font-size: 18px;
-      }
+  }
 `;
 
 

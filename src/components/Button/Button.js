@@ -9,7 +9,6 @@ const Button = ({
 
         <ButtonWrapper {...other}>{children}</ButtonWrapper>
     );
-
 };
 
 export default Button;

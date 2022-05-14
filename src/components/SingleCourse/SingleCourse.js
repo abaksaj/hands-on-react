@@ -36,7 +36,6 @@ const SingleCourse = ({ imgSrc, imgAlt }) => {
     Aliquet enim tortor at auctor urna nunc id. 
       </SingleCourseText>
     </SingleCourseWrapper>
-
   );
 };
 export default SingleCourse;

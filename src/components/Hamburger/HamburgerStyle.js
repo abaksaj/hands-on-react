@@ -8,7 +8,6 @@ export const ButtonPosition = styled.div`
     flex-Direction: column;
 `;
 
-
 export const  ButtonPositionInner = styled.div`
     align-Self: end;
 `;

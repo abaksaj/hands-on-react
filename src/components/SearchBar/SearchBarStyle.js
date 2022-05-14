@@ -12,21 +12,19 @@ export const SearchContainer  = styled.div`
 
     @media (${breakpoints.mobileLarge}) {
             padding: 0px, 15px;
-            margin-bottom: 40px;
-            
-        }
+            margin-bottom: 40px;  
+    }
 
     @media (${breakpoints.tabletSmall}) {
             padding: 0px, 15px;
             margin-bottom: 40px;
-        }
+    }
     
     @media (${breakpoints.tabletMedium}) {
             width: 400px;
             padding: 0px, 0px;
             display: inline-block;
-            
-        }
+    }
 
     @media (${breakpoints.tablet}) {
         width: 400px;
@@ -38,7 +36,7 @@ export const SearchContainer  = styled.div`
         width: 400px;
         padding: 0px, 0px;
         display: inline-block;
-        }
+    }
 
     @media (${breakpoints.desktopLarge}) {
         width: 400px;
@@ -56,9 +54,7 @@ export const SearchInput  = styled.input`
             line-height: 40px;
             outline: none;
             font-size: 14px;
-
-
-        }
+    }
 
     @media (${breakpoints.tabletSmall}) {
             border: 1px solid;
@@ -67,7 +63,7 @@ export const SearchInput  = styled.input`
             line-height: 40px;
             outline: none;
             font-size: 14px;
-        }
+    }
     
     @media (${breakpoints.tabletMedium}) {
         border: 1px solid;
@@ -76,7 +72,7 @@ export const SearchInput  = styled.input`
         line-height: 40px;
         outline: none;
         font-size: 14px
-        }
+    }
 
     @media (${breakpoints.tablet}) {
         border: 1px solid;
@@ -94,7 +90,7 @@ export const SearchInput  = styled.input`
         line-height: 40px;
         outline: none;
         font-size: 16px;
-        }
+    }
 
     @media (${breakpoints.desktopLarge}) {
         border: 1px solid;
