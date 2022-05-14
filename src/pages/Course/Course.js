@@ -35,7 +35,6 @@ const Course = () => {
             onClick={handleButtonClick}
             navigate={router}
             >
-
             <SingleCourse 
             imgSrc={course.imgSrc}
             imgAlt={course.imgAlt}

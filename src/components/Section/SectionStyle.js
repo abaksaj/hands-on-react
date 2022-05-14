@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { css } from "styled-components";
 import { colors, breakpoints } from "../../lib/style/theme";
 
 export const Section =  styled.section `
@@ -34,8 +35,7 @@ export const SectionHeading =  styled.div`
     }
 `;
 
-export const SectionTitle =  styled.h2`
-    
+const TitleStyle = css`
     color: ${colors.TextPrimary};
     font-size: 26px;
     font-weight: 500;
@@ -50,6 +50,26 @@ export const SectionTitle =  styled.h2`
             font-size: 36px;
         }
 `;
+
+export const SectionTitleH1 =  styled.h1`
+    ${TitleStyle}
+
+    ${(props) => props.isCentered &&`
+    text-align: center;
+    width: 100%; `
+    }
+`;
+
+export const SectionTitleH2 =  styled.h2`
+    ${TitleStyle}
+
+    ${(props) => props.isCentered &&`
+    text-align: center;
+    width: 100%; `
+    }
+`;
+
+
 
 
 

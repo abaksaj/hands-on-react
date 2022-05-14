@@ -28,7 +28,15 @@ export const Grid = styled.div `
   }
 `;
 
- export const Form = styled(FormFormik)``;
+ export const Form = styled(FormFormik)`
+    @media (${breakpoints.tabletSmall}){
+      width: 400px;
+
+    ${props => props.isCentered !== false && `
+      margin: 0 auto;
+        `}
+    }
+ `;
 
 export const FormRow = styled.div`
   margin-bottom: 32px;
