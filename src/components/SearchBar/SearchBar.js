@@ -1,15 +1,18 @@
 import React from "react";
-import { SearchContainerPosition, SearchContainer, SearchInput } from "./SearchBarStyle";
+import { SearchContainerPosition, 
+        SearchContainer, 
+        SearchInput 
+      } from "./SearchBarStyle";
 
 function SearchBar({
   value,
   placeholder,
-  isSearchDisabled,
+  isSearch,
   handleValues,
-  keyVal
+  keyVal,
+  loading
 }) {
 
-  
   return (
     <>
       <SearchContainerPosition>
@@ -17,8 +20,8 @@ function SearchBar({
           <SearchInput
             value={value}
             placeholder={placeholder}
-            disabled={isSearchDisabled}
-            onChange={(event) =>handleValues(keyVal, event.target.value)}
+            disabled={loading ? !isSearch :isSearch}
+            onChange={(event) =>handleValues(event.target.value)}
           />
         </SearchContainer>
       </SearchContainerPosition>

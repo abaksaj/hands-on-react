@@ -9,19 +9,11 @@ function App() {
   return  <>
   <Header/>
   <Routes>
-    
-
-  <Route path="/" element={<Home/>} />
-
-  <Route path="/Courses" element={<Courses/>} />
-
-  <Route path="/Course/:id" element={<Course/>} />
-  
-
+  <Route path="/" element={<Home/>}/>
+  <Route path="/Courses" element={<Courses/>}/>
+  <Route path="/Course/:id" element={<Course/>}/>
   </Routes>
-
   </>;
-   
 };
 
 export default App;

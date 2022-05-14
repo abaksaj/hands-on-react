@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { colors, fonts, breakpoints } from "../../lib/style/theme";
-
+import { colors } from "../../lib/style/theme";
 
  export const Button = styled.button`
     border: none;
@@ -46,7 +44,6 @@ import { colors, fonts, breakpoints } from "../../lib/style/theme";
     ${props => props.isLanding  && `
         width: 220px;  `
     }
-
 `;
 
 

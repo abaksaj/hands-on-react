@@ -13,11 +13,11 @@ const Course = () => {
 
     useEffect(() => {
         setCourses(coursesMock);
-        }, []);
+    }, []);
      
     useEffect(() => {
-        courses && setCourse(...courses.filter((course) => course.id === parseInt(id) ));
-        }, [courses, id]);
+        courses && setCourse(...courses.filter((course) => course.id === parseInt(id)));
+    }, [courses, id]);
 
     const router=useNavigate();
     const handleButtonClick = () => {

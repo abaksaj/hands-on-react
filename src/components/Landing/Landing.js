@@ -34,7 +34,6 @@ const Landing = () => {
         </LandingContentInner>
         </LandingContent>
     </LandingWrapper>
-    
   );
 };
 

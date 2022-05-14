@@ -17,7 +17,6 @@ function Hamburger() {
 
   return (
     <>
-
         <ButtonPosition>
         <ButtonPositionInner>
           <HamburgerButton onClick={() => setShowHamburgerMenu(true)}/>
@@ -33,7 +32,6 @@ function Hamburger() {
           </>
             )
         };
-
         </ButtonPosition>
     </>
   );

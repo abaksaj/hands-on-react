@@ -1,11 +1,13 @@
-import React from 'react'
-//import style from spinner library
+import React from 'react';
+import { Puff } from  'react-loader-spinner';
+import {Loader as LoaderWrapper,
+        Puff as Puffy} from "../../components/Loader/LoadingStyle";
+
 const Loader = () => {
   return (
-    <div>
-
-        Loading......
-    </div>
+    <LoaderWrapper>
+    <Puff />
+    </LoaderWrapper>
   )
 }
 

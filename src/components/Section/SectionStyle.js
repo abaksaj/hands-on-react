@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { NavLink, Link } from "react-router-dom";
 import { colors, breakpoints } from "../../lib/style/theme";
 
 export const Section =  styled.section `
@@ -12,7 +11,8 @@ export const SectionInner =  styled.div`
     @media (${breakpoints.desktop}){
         width: 960px;
         margin: 0 auto;
-        }
+    }
+
     @media (${breakpoints.desktopLarge}){
         width: 1260px;
     }

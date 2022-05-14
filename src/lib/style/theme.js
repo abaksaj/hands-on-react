@@ -1,9 +1,7 @@
-
 export const fonts = {
     Primary: '"Manrope", sans-serif ',
     Secondary: '"PT Serif", serif '
 };
-
 
 export const colors = {
     Primary: "#bf3939ef",

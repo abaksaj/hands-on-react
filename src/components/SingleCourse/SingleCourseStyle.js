@@ -28,7 +28,6 @@ export const SingleCourseFigure =  styled.figure `
         } 
 `;
 
-
 export const SingleCourseImg =  styled.img `
     width: 100%;
     height: 100%;
@@ -41,15 +40,11 @@ export const SingleCourseText  =  styled.p `
     color: ${colors.TextPrimary};
 
         @media (${breakpoints.tablet}) {
-            
             padding-left: 48px;
-        
         }
 
         @media (${breakpoints.desktopLarge}) {
-            
-                padding-left: 64px;
-                
+            padding-left: 64px;
         }
 `;
 
