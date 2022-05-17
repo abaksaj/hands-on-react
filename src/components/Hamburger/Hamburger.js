@@ -1,10 +1,9 @@
-import { useState } from "react";
 import { HamburgerButton } from "./HamburgerStyle";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { ButtonPosition,
         ButtonPositionInner,
         HamburgerMenu } from "./HamburgerStyle";
-
 
 function Hamburger() {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
@@ -25,7 +24,7 @@ function Hamburger() {
         {showHamburgerMenu && (
           <>
             <HamburgerMenu>
-              <a onClick={() => changeRoute("/Courses")}>Courses</a> <br />
+              <a onClick={() => changeRoute("/courses")}>Courses</a> <br />
               <a>Sign In</a> <br />
               <a>Register</a>
             </HamburgerMenu>

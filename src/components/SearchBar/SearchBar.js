@@ -9,7 +9,6 @@ function SearchBar({
   placeholder,
   isSearch,
   handleValues,
-  keyVal,
   loading
 }) {
 

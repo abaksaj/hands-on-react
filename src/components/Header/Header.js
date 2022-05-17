@@ -16,16 +16,16 @@ const Header = ({isSecondary}) => {
     return (
         <HeaderWrapper isSecondary={isSecondary}>
             <HeaderInner>
-                <LogoLink to = '/'>
-                    <LogoElement src={LogoImg} alt="logo" />
+                <LogoLink to='/'>
+                    <LogoElement src={LogoImg} alt="logo"/>
                 </LogoLink>
-                <Hamburger />
+                <Hamburger/>
                 <Nav>
-                    <HeaderNavLink to="/Courses">Courses</HeaderNavLink>
-                    <ButtonLink to = "/Sign-in">
-                        <Button isNav>Sign in </Button>
+                    <HeaderNavLink to="/courses">Courses</HeaderNavLink>
+                    <ButtonLink to='/sign-in'>
+                        <Button isNav>Sign in</Button> 
                     </ButtonLink>
-                    <ButtonLink to = "/Register">
+                    <ButtonLink to='/register'>
                         <Button isNav isSecondary>Register</Button>
                     </ButtonLink>
                 </Nav>

@@ -5,8 +5,7 @@ import {
     SectionInner,
     SectionActionText,
     SectionHeading,
-    SectionTitleH1,
-    SectionTitleH2
+    SectionTitle
  } from "./SectionStyle";
 
 const Section = ({
@@ -17,18 +16,14 @@ const Section = ({
     isHeadingVisible = true,
     onClick,
     sectionClass,
-    isMainSection = false,
-    isCentered = false
+    isCentered=false
 }) => {  
     return (
         <SectionWrapper sectionClass={sectionClass}>
             <SectionInner>
             {actionText && <SectionActionText>{actionText}</SectionActionText>}
             {isHeadingVisible && <SectionHeading>
-                {title &&
-                (isMainSection ? 
-                <SectionTitleH1 isCentered={isCentered}>{title}</SectionTitleH1> : 
-                <SectionTitleH2 isCentered={isCentered}>{title}</SectionTitleH2>)}
+                {title && <SectionTitle isCentered>{title}</SectionTitle>}
                 {buttonText && <Button onClick={onClick} isHeading isOutline>{buttonText}</Button>}
             </SectionHeading>}
             {children}

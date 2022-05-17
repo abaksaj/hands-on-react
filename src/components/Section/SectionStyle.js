@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { css } from "styled-components";
 import { colors, breakpoints } from "../../lib/style/theme";
 
 export const Section =  styled.section `
@@ -35,41 +34,26 @@ export const SectionHeading =  styled.div`
     }
 `;
 
-const TitleStyle = css`
+export const SectionTitle =  styled.h2`
     color: ${colors.TextPrimary};
     font-size: 26px;
     font-weight: 500;
     margin-bottom: 32px;
 
-        @media (${breakpoints.tablet}){
-            font-size: 32px;
-            margin-bottom: 0;
-        }
-
-        @media (${breakpoints.desktop}){
-            font-size: 36px;
-        }
-`;
-
-export const SectionTitleH1 =  styled.h1`
-    ${TitleStyle}
-
-    ${(props) => props.isCentered &&`
-    text-align: center;
-    width: 100%; `
+    @media (${breakpoints.tablet}){
+        font-size: 32px;
+        margin-bottom: 0;
     }
-`;
 
-export const SectionTitleH2 =  styled.h2`
-    ${TitleStyle}
-
-    ${(props) => props.isCentered &&`
-    text-align: center;
-    width: 100%; `
+    @media (${breakpoints.desktop}){
+        font-size: 36px;
     }
+
+    ${props => props.isCentered && `
+        text-align: center;
+        width: 100%;
+    `}
 `;
-
-
 
 
 

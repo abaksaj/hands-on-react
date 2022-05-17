@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { breakpoints, colors, fonts } from "./theme";
-
+import { breakpoints, colors } from "./theme";
 import {Form as FormFormik, 
         Field as FieldFormik, 
         ErrorMessage as ErrorMessageFormik
@@ -28,15 +27,17 @@ export const Grid = styled.div `
   }
 `;
 
- export const Form = styled(FormFormik)`
+export const FormWrapper = styled.div`
     @media (${breakpoints.tabletSmall}){
-      width: 400px;
+        width: 400px;
 
-    ${props => props.isCentered !== false && `
-      margin: 0 auto;
+        ${props => props.isCentered !== false && `
+            margin: 0 auto;
         `}
     }
- `;
+`;
+
+ export const Form = styled(FormFormik)``;
 
 export const FormRow = styled.div`
   margin-bottom: 32px;
@@ -55,7 +56,7 @@ const FieldStyle = css`
     padding: 0 12px;
     outline: none;
     font-size: 14px;
-    font-family: ${fonts.Primary};
+    font-family: ${colors.Primary};
 
     &:focus {
         border-color: ${colors.TextPrimary};
@@ -66,7 +67,7 @@ const FieldStyle = css`
     }
 `;
 
-export const Field = (FieldFormik)`
+export const Field = styled(FieldFormik)`
   ${FieldStyle}
 `;
 

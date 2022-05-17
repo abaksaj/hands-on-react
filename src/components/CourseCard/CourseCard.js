@@ -15,7 +15,7 @@ const CourseCard = ({
     subtitle
 }) => {
     return (
-        <CourseLink to={`/Course/${courseId}`}>
+        <CourseLink to={`/course/${courseId}`}>
             <Figure>
                 <Image src={imgSrc} alt={imgAlt} />
             </Figure>
