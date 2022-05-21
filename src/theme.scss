@@ -5,7 +5,7 @@
 $fontPrimary: "Manrope", "sans-serif";
 $fontSecondary: "PT Serif", "serif";
 
-//Colors #F6FAFB;
+//Colors 
 
 $colorPrimary: #bf3939ef;
 $colorSecondary: #ffffff;
@@ -14,12 +14,14 @@ $colorBgPrimary: #ffffff;
 $colorBgSecondary: #f6fafb;
 $colorTextPrimary: #333333;
 $colorTextSecondary: #696969;
+$colorMiddleForm: rgb(157, 154, 154);
 
 
 
 //Breakpoints
 $mobileLarge: "min-width: 375px";
 $tabletSmall: "min-width: 481px";
+$tabletMedium: "min-width: 576px";
 $tablet: "min-width: 768px";
 $desktop: "min-width: 1024px";
 $desktopLarge: "min-width: 1300px";

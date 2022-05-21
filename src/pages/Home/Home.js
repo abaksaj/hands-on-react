@@ -33,9 +33,7 @@ const Home = () => {
           actionText={"Learn something new"}
           title={"Open new possibilities"}
           buttonText={"More Courses"}
-          // onClick={ () => navigate("/courses")}>
-          >
-          
+          onClick={ () => navigate("/courses")}>
           {courses 
             ? <Grid>
               {courses.map(course => <CourseCard

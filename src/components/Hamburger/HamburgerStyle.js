@@ -21,8 +21,6 @@ export const  HamburgerMenu = styled.div`
     font-family: Arial, Helvetica, sans-serif;
 `;
 
-
-
 export const HamburgerButton = styled(HamburgerIcon)`
     width:30px;
     height: auto;

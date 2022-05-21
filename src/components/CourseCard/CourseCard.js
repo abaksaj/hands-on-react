@@ -23,6 +23,6 @@ const CourseCard = ({
             <Subtitle>{subtitle}</Subtitle>
         </CourseLink>
     );
-}
+};
 
 export default CourseCard;

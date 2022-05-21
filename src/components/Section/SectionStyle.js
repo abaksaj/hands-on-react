@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import { colors, breakpoints } from "../../lib/style/theme";
+import { css } from "styled-components";
 
-export const Section =  styled.section `
-    ${props => props.isTestimonials && `
+export const Section =  styled.section`
+    margin-top: 50px;
+    margin-bottom:80px;
+    ${props => props.isTestimonials &&`
         background-color: ${colors.BgSecondary};`
     }
 `;
@@ -34,8 +37,8 @@ export const SectionHeading =  styled.div`
     }
 `;
 
-export const SectionTitle =  styled.h2`
-    color: ${colors.TextPrimary};
+const TitleStyle =css`
+     color: ${colors.TextPrimary};
     font-size: 26px;
     font-weight: 500;
     margin-bottom: 32px;
@@ -49,11 +52,30 @@ export const SectionTitle =  styled.h2`
         font-size: 36px;
     }
 
-    ${props => props.isCentered && `
+    ${props => props.isCentered &&`
         text-align: center;
         width: 100%;
     `}
 `;
+
+export const SectionTitleH1 =  styled.h1`
+    ${TitleStyle}
+    
+    ${props => props.isCentered &&`
+            text-align: center;
+            width: 100%;
+        `}
+    `;
+
+export const SectionTitleH2 =  styled.h2`
+    ${TitleStyle}
+    
+    ${props => props.isCentered &&`
+            text-align: center;
+            width: 100%;
+        `}
+`;
+
 
 
 

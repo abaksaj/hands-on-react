@@ -17,19 +17,18 @@ function Hamburger() {
   return (
     <>
         <ButtonPosition>
-        <ButtonPositionInner>
-          <HamburgerButton onClick={() => setShowHamburgerMenu(true)}/>
-        </ButtonPositionInner>
+          <ButtonPositionInner>
+            <HamburgerButton onClick={() => setShowHamburgerMenu(true)}/>
+          </ButtonPositionInner>
 
         {showHamburgerMenu && (
           <>
             <HamburgerMenu>
-              <a onClick={() => changeRoute("/courses")}>Courses</a> <br />
-              <a>Sign In</a> <br />
-              <a>Register</a>
+              <a onClick={() => changeRoute("/courses")}>Courses</a><br/>
+              <a onClick={() => changeRoute("/sign-in")}>Sign In</a> <br/>
+              <a onClick={() => changeRoute("/register")}>Register</a>
             </HamburgerMenu>
-          </>
-            )
+          </>)
         };
         </ButtonPosition>
     </>

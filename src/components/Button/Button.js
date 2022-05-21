@@ -6,7 +6,6 @@ const Button = ({
 }) => {
     
     return (
-
         <ButtonWrapper {...other}>{children}</ButtonWrapper>
     );
 };

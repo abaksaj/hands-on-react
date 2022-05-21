@@ -26,12 +26,12 @@ export const TestimonialContent =  styled.div `
 `;
 
 export const TestimonialText =  styled.p `
-    font-size: 30px;
+    font-size: 20px;
     line-height: 180%;
     color: ${colors.TextSecondary};
 `;
 
 export const TestimonialQuotation =  styled.span `
-    font-size: 48px;
+    font-size: 27px;
     
 `;

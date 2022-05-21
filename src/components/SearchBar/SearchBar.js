@@ -20,8 +20,7 @@ function SearchBar({
             value={value}
             placeholder={placeholder}
             disabled={loading ? !isSearch :isSearch}
-            onChange={(event) =>handleValues(event.target.value)}
-          />
+            onChange={(event) =>handleValues(event.target.value)}/>
         </SearchContainer>
       </SearchContainerPosition>
     </>

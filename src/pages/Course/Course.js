@@ -26,23 +26,20 @@ const Course = () => {
 
     return (
         <>
-        <Header isSecondary={true} />
-        {course && (
-            <Section 
-            actionText={course.subtitle}
-            title={course.title}
-            buttonText={"Back"}
-            onClick={handleButtonClick}
-            navigate={router}
-            >
+            <Header isSecondary={true}/>
+            {course && (<Section 
+                actionText={course.subtitle}
+                title={course.title}
+                buttonText={"Back"}
+                onClick={handleButtonClick}
+                navigate={router}>
 
-            <SingleCourse 
-            imgSrc={course.imgSrc}
-            imgAlt={course.imgAlt}
-            />
-            </Section>
-            )
-        }
+                <SingleCourse 
+                imgSrc={course.imgSrc}
+                imgAlt={course.imgAlt}/>
+                </Section>
+                )
+            }
         </>
     );
 };

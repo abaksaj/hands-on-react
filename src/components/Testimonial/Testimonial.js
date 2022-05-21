@@ -13,16 +13,16 @@ const Testimonial = () => {
     return (
         <TestimonialWrapper> 
             <TestimonialFigure>
-                <TestimonialImg src={testimonialImg} alt="Testimonial" />
+                <TestimonialImg src={testimonialImg} alt="Testimonial"/>
             </TestimonialFigure>
             <TestimonialContent> 
-            <TestimonialText> 
-            <TestimonialQuotation>
-            At the academy, I learned how to apply technology in practice. 
-            rontend education was demanding, it required a lot of time. 
-            Upon completion, I got my first job as a developer. 
-            </TestimonialQuotation>
-            </TestimonialText>
+                <TestimonialText> 
+                <TestimonialQuotation>
+                At the academy, I learned how to apply technology in practice. 
+                rontend education was demanding, it required a lot of time. 
+                Upon completion, I got my first job as a developer. 
+                </TestimonialQuotation>
+                </TestimonialText>
             </TestimonialContent>
         </TestimonialWrapper>
     );

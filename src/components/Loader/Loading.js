@@ -6,7 +6,7 @@ import {Loader as LoaderWrapper,
 const Loader = () => {
   return (
     <LoaderWrapper>
-    <Puff />
+    <Puff/>
     </LoaderWrapper>
   )
 }

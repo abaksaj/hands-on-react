@@ -8,13 +8,11 @@ import {Grid} from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/style/mock/courses";
 import Loading from "../../components/Loader/Loading";
 
-
 const Courses = () => {
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearch] = useState("");
     const [isSearchDisabled, setisSearchDisabled] = useState(false);
     const [allCourses,setAllCourses] = useState();
-
     const handleSearch = (val) => {
         setSearch(val.toLowerCase());
     };

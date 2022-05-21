@@ -22,6 +22,8 @@ const Header = ({isSecondary}) => {
                 <Hamburger/>
                 <Nav>
                     <HeaderNavLink to="/courses">Courses</HeaderNavLink>
+                    <HeaderNavLink to="/profile">Profile</HeaderNavLink>
+                    <ButtonLink to='/profile'></ButtonLink>
                     <ButtonLink to='/sign-in'>
                         <Button isNav>Sign in</Button> 
                     </ButtonLink>

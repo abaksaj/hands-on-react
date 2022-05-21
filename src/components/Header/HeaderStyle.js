@@ -2,16 +2,16 @@ import styled from "styled-components";
 import { NavLink, Link } from "react-router-dom";
 import { colors, breakpoints } from "../../lib/style/theme";
 
-export const Header = styled.header `
+export const Header = styled.header`
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
     padding: 24px;
+    height: 120px;
 
-    ${props => props.isSecondary && `
-    
+    ${props => props.isSecondary &&`
     background-color: ${colors.TextPrimary};
     position: initial;
     `}
@@ -54,7 +54,6 @@ export const Nav = styled.nav`
 `;
 
 export const HeaderNavLink = styled(NavLink)`
-
     color: ${colors.Secondary};
     letter-spacing: 1px;
     margin-right: 48px;

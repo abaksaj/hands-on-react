@@ -49,9 +49,7 @@ export const Figure = styled.figure `
         }
 `;
 
-
 export const Image = styled.img `
-
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -60,7 +58,6 @@ export const Image = styled.img `
 `;
 
 export const Title = styled.h3 `
-
     font-size: 20px;
     font-weight: 500;
     color: ${colors.TextPrimary};
@@ -71,11 +68,13 @@ export const Title = styled.h3 `
 `;
 
 export const Subtitle = styled.sub `
-
     font-size: 16px;
     font-weight: 300;
     color: ${colors.TextSecondary};
-    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 

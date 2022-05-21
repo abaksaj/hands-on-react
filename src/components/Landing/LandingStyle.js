@@ -44,7 +44,7 @@ export const LandingOverlaySecondary = styled.div `
 export const LandingContent = styled.div `
     position: absolute;
     top: 0;
-    left: calc((100% - 1260px) / 2);
+    left: calc((100% - 1260px)/2);
     width: 1260px;
     height: 100%;
     display: flex;

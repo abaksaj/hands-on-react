@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { colors, breakpoints } from "../../lib/style/theme";
 
 export const SearchContainerPosition = styled.section`
+    margin-top: 50px;
     display: flex; 
     justify-content: flex-end;
 `;

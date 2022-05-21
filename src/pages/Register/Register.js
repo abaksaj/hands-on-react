@@ -18,20 +18,18 @@ const Register = () => {
     <>
     
          <Header isSecondary/>
-
          <Section title={"Register"} isMainSection isCentered>
             <Formik 
             initialValues={{
-                firstName: "",
-                lastName: "",
-                email: "",
-                password: "",
-                passwordConfirmed: "",
-                guthubUsername: "",
-                zeplinUsername: "",
-                activeFacultyYear: "",
-                isAdmin: false
-
+            firstName: "",
+            lastName: "",
+            email: "",
+            password: "",
+            passwordConfirmed: "",
+            githubUsername: "",
+            zeplinUsername: "",
+            activeFacultyYear: "",
+            isAdmin: false
             }} 
             validationSchema={Yup.object({
                 firstName: Yup.string()
@@ -60,7 +58,6 @@ const Register = () => {
                     alert(JSON.stringify(values, null, 2));
                     actions.setSubmitting(false)
                     actions.resetForm({
-
                     firstName: "",
                     lastName: "",
                     email: "",
@@ -72,8 +69,7 @@ const Register = () => {
                     isAdmin: false
                 });
                 },1000);
-            }}
-            >
+            }}>
                 {formik => (
                     <FormWrapper isCentered>
                         <Form>
