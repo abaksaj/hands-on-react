@@ -15,17 +15,17 @@ export const SingleCourseFigure =  styled.figure `
     overflow: hidden;
     margin-bottom: 32px;
 
-        @media (${breakpoints.desktopLarge} ) {
-            width: 450px;
-            height: 450px;
-        }
-        
-        @media (${breakpoints.tablet}) {
-            width: 350px;
-            height: 350px;
-            margin-bottom: 0;
-            flex-shrink: 0; 
-        } 
+    @media (${breakpoints.desktopLarge} ) {
+        width: 450px;
+        height: 450px;
+    }
+    
+    @media (${breakpoints.tablet}) {
+        width: 350px;
+        height: 350px;
+        margin-bottom: 0;
+        flex-shrink: 0; 
+    } 
 `;
 
 export const SingleCourseImg =  styled.img `
@@ -39,13 +39,13 @@ export const SingleCourseText  =  styled.p `
     line-height: 180%;
     color: ${colors.TextPrimary};
 
-        @media (${breakpoints.tablet}) {
-            padding-left: 48px;
-        }
+    @media (${breakpoints.tablet}) {
+        padding-left: 48px;
+    }
 
-        @media (${breakpoints.desktopLarge}) {
-            padding-left: 64px;
-        }
+    @media (${breakpoints.desktopLarge}) {
+        padding-left: 64px;
+    }
 `;
 
 

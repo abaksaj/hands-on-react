@@ -15,10 +15,10 @@ const Section = ({
     buttonText,
     isHeadingVisible = true,
     onClick,
-    sectionClass
+    isTestimonials
 }) => {  
     return (
-        <SectionWrapper sectionClass={sectionClass}>
+        <SectionWrapper isTestimonials={isTestimonials}>
             <SectionInner>
             {actionText && <SectionActionText>{actionText}</SectionActionText>}
             {isHeadingVisible && <SectionHeading>

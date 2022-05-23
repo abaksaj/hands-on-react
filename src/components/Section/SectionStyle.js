@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { colors, breakpoints } from "../../lib/style/theme";
 
 export const Section =  styled.section `
+    margin-top: 50px;
+    margin-bottom: 80px;
     ${props => props.isTestimonials && `
         background-color: ${colors.BgSecondary};`
     }
@@ -35,20 +37,19 @@ export const SectionHeading =  styled.div`
 `;
 
 export const SectionTitle =  styled.h2`
-    
     color: ${colors.TextPrimary};
     font-size: 26px;
     font-weight: 500;
     margin-bottom: 32px;
 
-        @media (${breakpoints.tablet}){
-            font-size: 32px;
-            margin-bottom: 0;
-        }
+    @media (${breakpoints.tablet}){
+        font-size: 32px;
+        margin-bottom: 0;
+    }
 
-        @media (${breakpoints.desktop}){
-            font-size: 36px;
-        }
+    @media (${breakpoints.desktop}){
+        font-size: 36px;
+    }
 `;
 
 

@@ -28,7 +28,7 @@ const Landing = () => {
           <LandingTitle>Learn what matters with Speck</LandingTitle>
           <LandingSubtitle> Make a turnaround in your career or upgrade your current skill set
              with knowledge-based lessons from IT practice. </LandingSubtitle>
-          <Link to="/Courses">
+          <Link to="/courses">
           <Button isLanding>Explore Courses</Button>
           </Link>
         </LandingContentInner>

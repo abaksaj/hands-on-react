@@ -25,8 +25,8 @@ function Hamburger() {
         {showHamburgerMenu && (
           <>
             <HamburgerMenu>
-              <a onClick={() => changeRoute("/Courses")}>Courses</a> <br />
-              <a>Sign In</a> <br />
+              <a onClick={() => changeRoute("/courses")}>Courses</a><br/>
+              <a>Sign In</a><br/>
               <a>Register</a>
             </HamburgerMenu>
           </>

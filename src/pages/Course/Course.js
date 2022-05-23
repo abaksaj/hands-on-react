@@ -2,9 +2,9 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
 import SingleCourse from "../../components/SingleCourse/SingleCourse";
+import coursesMock from "../../lib/style/mock/courses";
 import { useNavigate, useParams} from "react-router-dom";
 import {useState, useEffect} from "react";
-import coursesMock from "../../lib/style/mock/courses";
 
 const Course = () => {
     const {id} = useParams();
@@ -26,28 +26,21 @@ const Course = () => {
 
     return (
         <>
-        <Header isSecondary={true} />
-        {course && (
-            <Section 
-            actionText={course.subtitle}
-            title={course.title}
-            buttonText={"Back"}
-            onClick={handleButtonClick}
-            navigate={router}
-            >
-
-            <SingleCourse 
-            imgSrc={course.imgSrc}
-            imgAlt={course.imgAlt}
-            />
-            </Section>
-            )
-        }
+            <Header isSecondary={true}/>
+            {course && (<Section 
+                actionText={course.subtitle}
+                title={course.title}
+                buttonText={"Back"}
+                onClick={handleButtonClick}
+                navigate={router}>
+                <SingleCourse 
+                imgSrc={course.imgSrc}
+                imgAlt={course.imgAlt}/>
+                </Section>
+                )
+            }
         </>
     );
 };
     
 export default Course;
-
-
-
