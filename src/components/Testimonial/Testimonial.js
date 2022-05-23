@@ -1,6 +1,5 @@
 import React from 'react';
 import '../Testimonial/Testimonial.scss';
-
 import TestimonialImg from '../../assets/images/testimonial.jpg';
 
 const Testimonial = () => {
@@ -11,11 +10,11 @@ const Testimonial = () => {
             </figure>
             <div className="Testimonial-Content">
                 <p className="Testimonial-Text">
-                    <span className="Testimonial-Quotation">"</span>
-                    At the academy, I learned how to apply technology in practice. 
-                    Frontend education was demanding, it required a lot of time. 
-                    Upon completion, I got my first job as a developer.
-                    <span className="Testimonial-Quotation">"</span>
+                <span className="Testimonial-Quotation">"</span>
+                At the academy, I learned how to apply technology in practice. 
+                Frontend education was demanding, it required a lot of time. 
+                Upon completion, I got my first job as a developer.
+                <span className="Testimonial-Quotation">"</span>
                 </p>
             </div>
         </div>

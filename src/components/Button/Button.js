@@ -10,16 +10,10 @@ const Button = ({modifiers, children}) => {
     };
 
     let buttonClass = "Button";
-
     modifiers.forEach(modifier => (buttonClass += " " + modifierClasses[modifiers]));
-
     return (
-
         <button className={buttonClass}>{children}</button>
-
     );
-
-
 };
 
 export default Button;

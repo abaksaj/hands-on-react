@@ -19,7 +19,6 @@
 
         @media ($desktop) {
             display: none;
-        
         }
 
         path {
@@ -39,15 +38,12 @@
     align-items: center;
 
     @media ($desktop) {
-        
-            width: 960px;
-            margin: 0 auto;
-            padding: 32px 0;
-
- }
+        width: 960px;
+        margin: 0 auto;
+        padding: 32px 0;
+    }
 
     @media ($desktopLarge) {
-    
         width: 1260px;
     }
 }
@@ -56,154 +52,28 @@
     display: none;
 
     @media ($desktop) {
-        
-            display: block;
+        display: block;
     }
-
 }
-
 
 &-Logo {
     width: 140px;
-
 }
 
 &-NavLink {
     color: $colorBgPrimary;
     letter-spacing: 1px;
     margin-right: 48px;
-
-
 }
-
 
 &-NavButton {
     margin-right: 24px;
     display: inline-block;
     
-
     &:last-child {
         margin-right: 0;
-    
     }
-
 }
-
-// &-nav-button:last-child {
-//     margin-right: 0;
-// }
-
 }
 
 
-/* dodala sam secondary header
-
-.header.header_secondary {
-    background-color: var(--color--text-primary);
-    position: initial;
-}
-
-*/
-
-/*.header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    padding: 32px 0;
-
-}
-*/
-
-
-/*.header__hamburger {
-    width:30px;
-    height: auto;
-}*/
-
-// .header__hamburger path {
-//     fill: #ffffff;
-// }
-
-
-// .header__inner {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-
-// }
-
-/*.header__inner {
-    width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-*/
-
-
-// .header__nav {
-//     display: none;
-
-// }
-
-
-// .header__logo {
-//     width: 140px;
-
-// }
-
-// .header__nav-link {
-//     color: var(--color-bg-secondary);
-//     letter-spacing: 1px;
-//     margin-right: 48px;
-
-
-// }
-
-// .header__nav-button {
-//     margin-right: 24px;
-
-// }
-
-// .header__nav-button:last-child {
-//     margin-right: 0;
-
-
-// }
-
-// @media (min-width: 1024px) {
-//     .header__inner {
-//         width: 960px;
-//         margin: 0 auto;
-//         padding: 32px 0;
-        
-//     }
-    
-//     .header__nav {
-//         display: block;
-//     }
-
-//     .header__hamburger {
-//         display: none;
-//     }
-// }
-
-// @media (min-width: 1300px) {
-//     .header__inner {
-//         width: 1260px;
-        
-//     }
-    
-//     .header__nav {
-//         display: block;
-//     }
-
-//     .header__hamburger {
-//         display: none;
-//     }
-
-// }

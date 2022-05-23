@@ -1,11 +1,9 @@
 @import '../../theme.scss';
 
 .SingleCourse {
-
     @media ($tablet) {
-            display: flex;
-            justify-content: space-between;
-        
+        display: flex;
+        justify-content: space-between;
     }
 
     &-Figure {
@@ -16,25 +14,22 @@
         margin-bottom: 32px;
 
         @media ($desktopLarge ) {
-                width: 450px;
-                height: 450px;
-    }
+            width: 450px;
+            height: 450px;
+        }
 
         @media ($tablet) {
             width: 350px;
             height: 350px;
             margin-bottom: 0;
             flex-shrink: 0;
-        
-    } 
+        } 
     }
 
     &-Image {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        
-    
     }
     
     &-Text {
@@ -43,82 +38,17 @@
         color: $colorTextPrimary;
 
         @media ($tablet) {
-            
             padding-left: 48px;
-        
         }
 
         @media ($desktopLarge) {
-            
-                padding-left: 64px;
-                
+            padding-left: 64px;    
         }
-    
     }
-
-    
-    
 }
 
 
 
-
-
-// .single-course__figure {
-//     width: 100%;
-//     height: auto;
-//     border-radius: 16px;
-//     overflow: hidden;
-//     margin-bottom: 32px;
-
-    
-
-// }
-
-// .single-course__image {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-
-// }
-
-// .single-course__text {
-//     font-size: 16px;
-//     line-height: 180%;
-//     color: var(--color-text-primary);
-
-// }
-
-// @media (min-width: 768px ) {
-//     .single-course {
-//         display: flex;
-//         justify-content: space-between;
-    
-//     }
-//     .single-course__figure {
-//         width: 350px;
-//         height: 350px;
-//         margin-bottom: 0;
-//         flex-shrink: 0;
-    
-//     }
-//     .single-course__text {
-//         padding-left: 48px;
-
-//     }
-// }
-
-// @media (min-width: 1300px ) {
-//     .single-course__figure {
-//         width: 450px;
-//         height: 450px;
-    
-//     }
-//     .single-course__text {
-//         padding-left: 64px;
-        
-//     }
-// }
 
 
 
