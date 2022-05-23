@@ -64,47 +64,46 @@ const Profile = (
       <Section title={"My Profile"} isLeft>
         <FormikOut isLeft>
         <Formik
-
           initialValues={data}
           validationSchema={Yup.object({
-            firstName: Yup.string().required("First name is required"),
-            lastName: Yup.string().required("Last name is required"),
-            email: Yup.string()
-              .email("Invalid email address")
-              .required("Email is required"),
-            password: Yup.string()
-              .min(8, "Password must be at least 8 characters long")
-              .required("Password is required"),
-            passwordConfirmed: Yup.string().test(
-              "passwords-match",
-              "Passwords must match",
-              function (value) {
-                return this.parent.password === value;
-              }
+          firstName: Yup.string().required("First name is required"),
+          lastName: Yup.string().required("Last name is required"),
+          email: Yup.string()
+            .email("Invalid email address")
+            .required("Email is required"),
+          password: Yup.string()
+            .min(8, "Password must be at least 8 characters long")
+            .required("Password is required"),
+          passwordConfirmed: Yup.string().test(
+            "passwords-match",
+            "Passwords must match",
+            function (value) {
+              return this.parent.password === value;
+            }
             ),
-            githubUsername: Yup.string()
-            .required("Github username is required"),
-            zeplinUsername: Yup.string().required(
-              "Zeplin useername is required"
-            ),
-            activeFacultyYear: Yup.string().required(
-              "Active faculty year is reqired"
-            ),
+          githubUsername: Yup.string()
+          .required("Github username is required"),
+          zeplinUsername: Yup.string().required(
+            "Zeplin useername is required"
+          ),
+          activeFacultyYear: Yup.string().required(
+            "Active faculty year is reqired"
+          ),
           })}
           onSubmit={(values, actions) => {
             setTimeout(() => {
               alert(JSON.stringify(values, null, 2));
               actions.setSubmitting(false);
               actions.resetForm({
-                firstName: "",
-                lastName: "",
-                email: "",
-                password: "",
-                passwordConfirmed: "",
-                githubUsername: "",
-                zeplinUsername: "",
-                activeFacultyYear: "",
-                isAdmin: false,
+              firstName: "",
+              lastName: "",
+              email: "",
+              password: "",
+              passwordConfirmed: "",
+              githubUsername: "",
+              zeplinUsername: "",
+              activeFacultyYear: "",
+              isAdmin: false,
               });
             }, 1000);
           }}
@@ -120,7 +119,6 @@ const Profile = (
                     id="firstName"
                     disabled={formik.isSubmitting}
                     value={data.firstName}
-
                     onChange={handleChange}/>
                   <ErrorMessage component={"div"} name="firstName"/>
                 </FormRow>
@@ -228,8 +226,7 @@ const Profile = (
                 newPasswordConfirmed: "",
               });
             }, 1000);
-          }}
-        >
+          }}>
           {(formik) => (
             <FormWrapper>
               <Form>
@@ -249,7 +246,6 @@ const Profile = (
               <Button isOutline onClick={()=>setShowbtn(!showbtn)}>{showbtn ? "Update Password":"Processing...." }</Button>
               </FormRow>
               </Form>
-              
             </FormWrapper>
           )}
         </Formik>
@@ -270,8 +266,7 @@ const Profile = (
           <Button
             onClick={() => {
               setEditPassword(!editPassword);
-            }}
-          >
+            }}>
             {editPassword ? (
               <TextPassword>Cancel</TextPassword>
             ) : (
