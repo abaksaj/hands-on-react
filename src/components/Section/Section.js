@@ -26,8 +26,8 @@ const Section = ({
             {actionText && <SectionActionText>{actionText}</SectionActionText>}
             {isHeadingVisible && <SectionHeading>
                 {title && (isMainSection 
-                ? <SectionTitleH1 isCentered>{title}</SectionTitleH1>
-                :<SectionTitleH2 >{title}</SectionTitleH2>)
+                ? <SectionTitleH1 isCentered={isCentered}>{title}</SectionTitleH1>
+                :<SectionTitleH2 isCentered={isCentered}>{title}</SectionTitleH2>)
                 }
                 {buttonText && <Button onClick={onClick} isHeading isOutline>{buttonText}</Button>}
             </SectionHeading>}

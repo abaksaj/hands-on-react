@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints, colors } from "./theme";
+import {breakpoints, colors} from "./theme";
 import {Form as FormFormik, 
         Field as FieldFormik, 
         ErrorMessage as ErrorMessageFormik
@@ -86,7 +86,9 @@ export const ErrorMessage = styled(ErrorMessageFormik)`
 
 //  Profile page
 
-export const SectionOut = styled.div``;
+export const SectionOut = styled.div`
+  box-flex: center;
+`;
 
 export const FormikOut = styled.div`
   @media (${breakpoints.desktopLarge}){
@@ -115,7 +117,7 @@ export const FormikOut = styled.div`
 `;
 
 export const MiddleBoxOut = styled.div`
-
+  display: block;
 `;
 
 export const MiddleBoxStyle = styled.div`

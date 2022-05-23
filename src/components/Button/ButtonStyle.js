@@ -44,6 +44,12 @@ import { colors } from "../../lib/style/theme";
     ${props => props.isLanding  && `
         width: 220px;  `
     }
+
+    ${props => props.isForma && `
+        width: 220px; 
+        margin: 0 auto;
+        display:block; `
+    }
 `;
 
 

@@ -8,6 +8,7 @@ import {Grid} from "../../lib/style/generalStyles";
 import coursesMock from "../../lib/style/mock/courses";
 import Loading from "../../components/Loader/Loading";
 import {useNavigate} from "react-router-dom";
+import { homeMock } from "../../lib/style/mock/homeMock";
 
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
   useEffect(() => {
     console.log(courses);
     setTimeout(() => {
-      setCourses(coursesMock);
+      setCourses(homeMock);
       setLoading(false);
     }, 1000);
   },[]);

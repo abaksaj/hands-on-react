@@ -2,7 +2,6 @@ import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
 import {Formik} from "formik";
 import * as Yup from "yup";
-
 import {Form, 
     FormRow, 
     Field, 
@@ -13,12 +12,12 @@ import {Form,
 } from "../../lib/style/generalStyles";
 import { Button } from "../../components/Button/ButtonStyle";
 
-const Register = () => {
+
+const Register= () => {
     return (
     <>
-    
-         <Header isSecondary/>
-         <Section title={"Register"} isMainSection isCentered>
+        <Header isSecondary/>
+        <Section title={"Register"} isMainSection isCentered>
             <Formik 
             initialValues={{
             firstName: "",
@@ -29,7 +28,7 @@ const Register = () => {
             githubUsername: "",
             zeplinUsername: "",
             activeFacultyYear: "",
-            isAdmin: false
+            isAdmin: false,
             }} 
             validationSchema={Yup.object({
                 firstName: Yup.string()
@@ -44,7 +43,7 @@ const Register = () => {
                     .required("Password is required"),
                 passwordConfirmed: Yup.string()
                     .test("passwords-match", "Passwords must match", function(value) {
-                        return this.parent.password ===value}),
+                        return this.parent.password === value}),
                 githubUsername: Yup.string()
                     .required("Github username is required"),
                 zeplinUsername: Yup.string()
@@ -86,11 +85,11 @@ const Register = () => {
                                 <ErrorMessage component={"div"} name="email"/>
                             </FormRow>
                             <FormRow>
-                                <Field type="text" name="password" placeholder="Password..." disabled={formik.isSubmitting}/>
+                                <Field type="password" name="password" placeholder="Password..." disabled={formik.isSubmitting}/>
                                 <ErrorMessage component={"div"} name="password"/>
                             </FormRow>
                             <FormRow>
-                                <Field type="text" name="psswordConfirmed" placeholder="Cobfirm password..." disabled={formik.isSubmitting}/>
+                                <Field type="password" name="psswordConfirmed" placeholder="Confirm password..." disabled={formik.isSubmitting}/>
                                 <ErrorMessage component={"div"} name="psswordConfirmed"/> 
                             </FormRow>
                             <FormRow>
@@ -125,8 +124,10 @@ const Register = () => {
                 )}
             </Formik>
         </Section>  
+        
     </>
     );
 };
 
 export default Register;
+

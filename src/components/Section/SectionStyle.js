@@ -4,10 +4,11 @@ import { css } from "styled-components";
 
 export const Section =  styled.section`
     margin-top: 50px;
-    margin-bottom:80px;
+    margin-bottom: 80px;
     ${props => props.isTestimonials &&`
         background-color: ${colors.BgSecondary};`
     }
+    
 `;
 
 export const SectionInner =  styled.div`

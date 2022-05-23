@@ -41,7 +41,7 @@ const Courses = () => {
                     keyVal={"searchTerm"}
                     handleValues={handleSearch}/>
                 <Section 
-                    title={"All Lectures"}>
+                    title={"All Courses"}>
                     {loading ? <Loading/>:""}     
                     <Grid>
                     {allCourses?.filter((course) => {
