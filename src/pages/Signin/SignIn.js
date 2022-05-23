@@ -5,8 +5,6 @@ import * as Yup from "yup";
 import {Form, 
     FormRow, 
     Field, 
-    Select, 
-    Option, 
     ErrorMessage,
     FormWrapper
 } from "../../lib/style/generalStyles";

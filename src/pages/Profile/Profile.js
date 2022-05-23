@@ -26,11 +26,10 @@ import {
 import {Button} from "../../components/Button/ButtonStyle";
 
 const Profile = (
-  isSubmitting=false
 ) => {
   const [editPassword, setEditPassword] = useState(false);
-  const [showButton,setShowButton]=useState(true);
-  const [showUpdate,setShowUpdate]=useState(true);
+  const [showbtn,setShowbtn]=useState(true);
+  const [showupdate,setShowupdate]=useState(true);
   const [data,setData]=useState({
     firstName:"Ana",
     lastName:"Bakšaj",
@@ -53,7 +52,11 @@ const Profile = (
     setPasswordData({[event.target.name]:event.target.value}) 
   }
 
-  
+  const showalert=()=>{
+    setShowbtn(!showupdate)
+    alert(JSON.stringify(data))
+  }
+
   return (
     <>
       <Header isSecondary/>
@@ -179,16 +182,16 @@ const Profile = (
                   <ErrorMessage component={"div"} name="activeFacultyYear"/>
                 </FormRow>
                 <FormRow>
-                {editPassword ?  <Button isOutline isForma disabled={formik.isSubmitting}>
-                {formik.isSubmitting ? "Processing..." : "Update"}
-              </Button>:""}
+                {editPassword ? <Button isOutline disabled={formik.isSubmitting} onClick={showalert}>{formik.isSubmitting ? "Processing..." : "Update"}</Button>:""} 
                 </FormRow>
               </Form>
             </FormWrapper>
           )}
         </Formik>
         </FormikOut>
+
         {/*Reset password form */}
+
         <MiddleBoxOut>
         <MiddleBoxStyle>
           <MiddleBox>
@@ -228,7 +231,7 @@ const Profile = (
           }}
         >
           {(formik) => (
-            <FormWrapper isLeft>
+            <FormWrapper>
               <Form>
               <FormRow>
                 <Field onChange={handlePasswordChange} value={passwordData.oldPassword} type="password" name="oldPassword" placeholder="Old password..." disabled={formik.isSubmitting}/>
@@ -243,9 +246,7 @@ const Profile = (
                 <ErrorMessage component={"div"} name="newPasswordConfirmed"/>
               </FormRow>
               <FormRow>
-              <Button isOutline isForma disabled={formik.isSubmitting}>
-                {formik.isSubmitting ? "Processing..." : "Update password"}
-              </Button>
+              <Button isOutline onClick={()=>setShowbtn(!showbtn)}>{showbtn ? "Update Password":"Processing...." }</Button>
               </FormRow>
               </Form>
               
