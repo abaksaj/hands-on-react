@@ -11,162 +11,118 @@ import {
   Option,
   ErrorMessage,
   FormWrapper,
-  SectionOut,
+  Label,
   FormikOut,
-  MiddleBoxOut,
-  MiddleBoxStyle,
   MiddleBox,
   InputValues,
   InputFill,
   TextPassword,
   ButtonText,
-  TopRightButton,
-  TopRightButtonOut
+  ProfileContainer
 } from "../../lib/style/generalStyles";
 import {Button} from "../../components/Button/ButtonStyle";
 
 const Profile = (
 ) => {
-  const [editPassword, setEditPassword] = useState(false);
-  const [showbtn,setShowbtn]=useState(true);
-  const [showupdate,setShowupdate]=useState(true);
-  const [data,setData]=useState({
-    firstName:"Ana",
-    lastName:"Bakšaj",
-    email:"ana.baksaj55@gmail.com",
-    githubUsername: "abaksaj",
-    zeplinUsername: "anabaksaj55",
-  })
-
-  const [passwordData, setPasswordData]=useState({
-    oldPassword: "",
-    newPassword: "",
-    newPasswordConfirmed: "",
-  })
-
-  const handleChange=(event)=>{
-    setData({[event.target.name]:event.target.value}) 
-  }
-
-  const handlePasswordChange=(event)=>{
-    setPasswordData({[event.target.name]:event.target.value}) 
-  }
-
-  const showalert=()=>{
-    setShowbtn(!showupdate)
-    alert(JSON.stringify(data))
-  }
-
+  const [isEditing, setIsEditing] = useState(false);
   return (
     <>
       <Header isSecondary/>
-      <SectionOut>
-      <Section title={"My Profile"} isLeft>
+      <Section 
+        buttonText={isEditing ? "Cancel" : "Edit"}
+        onClick={() => setIsEditing(!isEditing)}
+        title={"My Profile"} 
+        isLeft>
+        <ProfileContainer>
         <FormikOut isLeft>
         <Formik
-          initialValues={data}
+          initialValues={{
+            firstName:"Ana",
+            lastName:"Bakšaj",
+            email:"ana.baksaj55@gmail.com",
+            githubUsername: "abaksaj",
+            zeplinUsername: "anabaksaj55",
+            activeFacultyYear: "0"
+          }}
           validationSchema={Yup.object({
-          firstName: Yup.string().required("First name is required"),
-          lastName: Yup.string().required("Last name is required"),
-          email: Yup.string()
-            .email("Invalid email address")
-            .required("Email is required"),
-          password: Yup.string()
-            .min(8, "Password must be at least 8 characters long")
-            .required("Password is required"),
-          passwordConfirmed: Yup.string().test(
-            "passwords-match",
-            "Passwords must match",
-            function (value) {
-              return this.parent.password === value;
-            }
+            firstName: Yup.string().required("First name is required"),
+            lastName: Yup.string().required("Last name is required"),
+            email: Yup.string()
+              .email("Invalid email address")
+              .required("Email is required"),
+            githubUsername: Yup.string()
+            .required("Github username is required"),
+            zeplinUsername: Yup.string().required(
+              "Zeplin useername is required"
             ),
-          githubUsername: Yup.string()
-          .required("Github username is required"),
-          zeplinUsername: Yup.string().required(
-            "Zeplin useername is required"
-          ),
-          activeFacultyYear: Yup.string().required(
-            "Active faculty year is reqired"
-          ),
+            activeFacultyYear: Yup.string().required(
+              "Active faculty year is reqired"
+            ),
           })}
           onSubmit={(values, actions) => {
             setTimeout(() => {
               alert(JSON.stringify(values, null, 2));
               actions.setSubmitting(false);
               actions.resetForm({
-              firstName: "",
-              lastName: "",
-              email: "",
-              password: "",
-              passwordConfirmed: "",
-              githubUsername: "",
-              zeplinUsername: "",
-              activeFacultyYear: "",
-              isAdmin: false,
+                firstName: "",
+                lastName: "",
+                email: "",
+                githubUsername: "",
+                zeplinUsername: "",
+                activeFacultyYear: "",
+                isAdmin: false,
               });
             }, 1000);
-          }}
-        >
+          }}>
+
           {(formik) => (
             <FormWrapper>
               <Form>
                 <FormRow>
-                  <label htmlFor="firstName">First name:</label>
+                  <Label htmlFor="firstName">First name:</Label>
                   <Field
                     type="text"
                     name="firstName"
                     id="firstName"
-                    disabled={formik.isSubmitting}
-                    value={data.firstName}
-                    onChange={handleChange}/>
+                    disabled={formik.isSubmitting || !isEditing}/>
                   <ErrorMessage component={"div"} name="firstName"/>
                 </FormRow>
                 <FormRow>
-                  <label htmlFor="lastName">Last name:</label>
+                <Label htmlFor="lastName">Last name:</Label>
                   <Field
                     type="text"
                     name="lastName"
-                    disabled={formik.isSubmitting}
-                    value={data.lastName}
-                    onChange={handleChange}/>
+                    disabled={formik.isSubmitting || !isEditing}/>
                   <ErrorMessage component={"div"} name="lastName"/>
                 </FormRow>
                 <FormRow>
-                  <label htmlFor="email">Email:</label>
+                <Label htmlFor="email">Email:</Label>
                   <Field
                     type="text"
                     name="email"
-                    disabled={formik.isSubmitting}
-                    value={data.email}
-                    onChange={handleChange}/>
+                    disabled={formik.isSubmitting || !isEditing}/>
                   <ErrorMessage component={"div"} name="email"/>
                 </FormRow>
                 <FormRow>
-                  <label htmlFor="githubUsername">Github username:</label>
+                <Label htmlFor="githubUsername">Github username:</Label>
                   <Field
                     type="text"
                     name="githubUsername"
-                    disabled={formik.isSubmitting}
-                    value={data.githubUsername}
-                    onChange={handleChange}/>
+                    disabled={formik.isSubmitting || !isEditing}/>
                   <ErrorMessage component={"div"} name="githubUsername"/>
                 </FormRow>
                 <FormRow>
-                  <label htmlFor="zeplinUsername">Zeplin username:</label>
+                <Label htmlFor="zeplinUsername">Zeplin username:</Label>
                   <Field
                     type="text"
                     name="zeplinUsername"
-                    disabled={formik.isSubmitting}
-                    value={data.zeplinUsername}
-                    onChange={handleChange}/>
+                    disabled={formik.isSubmitting || !isEditing}/>
                   <ErrorMessage component={"div"} name="zeplinUsername"/>
                 </FormRow>
                 <FormRow>
-                  <Select
+                  <Select disabled={formik.isSubmitting || !isEditing}
                     id="activeFacultyYear"
-                    {...formik.getFieldProps("activeFacultyYear")}
-                  >
+                    {...formik.getFieldProps("activeFacultyYear")}>
                     <Option value="" disabled hidden>
                       Choose an Active faculty year
                     </Option>
@@ -180,7 +136,9 @@ const Profile = (
                   <ErrorMessage component={"div"} name="activeFacultyYear"/>
                 </FormRow>
                 <FormRow>
-                {editPassword ? <Button isOutline disabled={formik.isSubmitting} onClick={showalert}>{formik.isSubmitting ? "Processing..." : "Update"}</Button>:""} 
+                {isEditing ? <Button type="submit" isOutline isForma disabled={formik.isSubmitting}>
+                                    {formik.isSubmitting ? "Processing..." : "Update"}
+                </Button>:""} 
                 </FormRow>
               </Form>
             </FormWrapper>
@@ -190,93 +148,77 @@ const Profile = (
 
         {/*Reset password form */}
 
-        <MiddleBoxOut>
-        <MiddleBoxStyle>
           <MiddleBox>
-            {editPassword ? (
+            {isEditing ?  (
               <InputValues>
-                <TextPassword>Password Reset</TextPassword>
+                <TextPassword>Password reset</TextPassword>
                 <Formik
-          initialValues={passwordData}
-          validationSchema={Yup.object({
-            oldpassword: Yup.string()
-              .required("Old password is required"),
-              newPassword: Yup.string()
-              .min(8, "Password must be at least 8 characters long")
-              .required("New password is required"),
-            newPasswordConfirmed: Yup.string()
-              .required("New password is required")
-              .test(
-              "passwords-match",
-              "Passwords must match",
-              function (value) {
-                return this.parent.password === value;
-              }
-            )
-            // .oneOf([Yup.ref('newPassword'), null], 'Passwords must match')
-          })}
-          onSubmit={(values, actions) => {
-            alert('update button clicked')
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              actions.setSubmitting(false);
-              actions.resetForm({
-                oldPassword: "",
-                newPassword: "",
-                newPasswordConfirmed: "",
-              });
-            }, 1000);
-          }}>
+                initialValues={{
+                  oldPassword: "",
+                  newPassword: "",
+                  newPasswordConfirmed: ""}
+               }
+                validationSchema={Yup.object({
+                  oldPassword: Yup.string()
+                  .required("Old password is required"),
+                  newPassword: Yup.string()
+                  .min(8, "Password must be at least 8 characters long")
+                  .required("New password is required"),
+                  newPasswordConfirmed: Yup.string()
+                  .required("New password is required")
+                  .test(
+                  "passwords-match",
+                  "Passwords must match",
+                  function (value) {
+                    return this.parent.newPassword === value;
+                  }
+                )
+                })}
+                onSubmit={(values, actions) => {
+                  setTimeout(() => {
+                    alert(JSON.stringify(values, null, 2));
+                    actions.setSubmitting(false);
+                    actions.resetForm({
+                      oldPassword: "",
+                      newPassword: "",
+                      newPasswordConfirmed: "",
+                    });
+                  }, 1000);
+                }}>
           {(formik) => (
             <FormWrapper>
               <Form>
               <FormRow>
-                <Field onChange={handlePasswordChange} value={passwordData.oldPassword} type="password" name="oldPassword" placeholder="Old password..." disabled={formik.isSubmitting}/>
+                <Field  type="password" name="oldPassword" placeholder="Old password..." disabled={formik.isSubmitting}/>
                 <ErrorMessage component={"div"} name="oldPassword"/>
               </FormRow>
               <FormRow>
-                <Field onChange={handlePasswordChange}  value={passwordData.newPassword} type="password" name="newPassword" placeholder="New password..." disabled={formik.isSubmitting}/>
+                <Field  type="password" name="newPassword" placeholder="New password..." disabled={formik.isSubmitting}/>
                 <ErrorMessage component={"div"} name="newPassword"/>
               </FormRow>
               <FormRow>
-                <Field onChange={handlePasswordChange}  value={passwordData.newPasswordConfirmed} type="password" name="newPasswordConfirmed" placeholder="New password confirmed..." disabled={formik.isSubmitting}/>
+                <Field  type="password" name="newPasswordConfirmed" placeholder="New password confirmed..." disabled={formik.isSubmitting}/>
                 <ErrorMessage component={"div"} name="newPasswordConfirmed"/>
               </FormRow>
               <FormRow>
-              <Button isOutline onClick={()=>setShowbtn(!showbtn)}>{showbtn ? "Update Password":"Processing...." }</Button>
+              <Button type="submit" isOutline isForma disabled={formik.isSubmitting}>
+                      {formik.isSubmitting ? "Processing..." : "Update password"}
+              </Button>
               </FormRow>
               </Form>
             </FormWrapper>
           )}
-        </Formik>
+            </Formik>
               </InputValues>
-            ) : (
+              ) : (
               <InputFill>
-                <TextPassword>Password Reset</TextPassword>
-                <ButtonText>
-                  In Order to Change the password click the edit button
-                </ButtonText>
+                <TextPassword>Password reset</TextPassword>
+                <ButtonText>In order to change the password click the Edit button</ButtonText>
               </InputFill>
             )}
           </MiddleBox>
-        </MiddleBoxStyle>
-        </MiddleBoxOut>
-       <TopRightButtonOut isOutline>
-        <TopRightButton>
-          <Button
-            onClick={() => {
-              setEditPassword(!editPassword);
-            }}>
-            {editPassword ? (
-              <TextPassword>Cancel</TextPassword>
-            ) : (
-              <TextPassword>Edit</TextPassword>
-            )}
-          </Button>
-        </TopRightButton>
-       </TopRightButtonOut> 
+          </ProfileContainer>
       </Section>
-      </SectionOut>
     </>
   );
 };

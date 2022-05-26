@@ -48,6 +48,14 @@ export const FormRow = styled.div`
   }
 `;
 
+export const Label = styled.label`
+font-size: 15px;
+font-family: ${colors.Primary};
+height: 50px;
+line-height: 50px;
+font-weight: bold;
+`;
+
 const FieldStyle = css`
   border: 1px solid ${colors.TextSecondary};
   border-radius: 6px;
@@ -86,10 +94,6 @@ export const ErrorMessage = styled(ErrorMessageFormik)`
 
 //  Profile page
 
-export const SectionOut = styled.div`
-  box-flex: center;
-`;
-
 export const FormikOut = styled.div`
   @media (${breakpoints.desktopLarge}){
       width: 1300px;
@@ -116,22 +120,23 @@ export const FormikOut = styled.div`
   `}
 `;
 
-export const MiddleBoxOut = styled.div`
-  display: block;
-`;
-
-export const MiddleBoxStyle = styled.div`
-  position: absolute;
-  top: 30%;
-  right: 15%;
-  width: 500px;
-`;
 export const MiddleBox = styled.div`
-  background-color: ${colors.TextSecondary};
-  width:30%;
+  background-color: ${colors.middleBox};
   border-radius: 10px;
   padding: 10px;
-  width:100%;
+  width: 500px;
+
+  @media (${breakpoints.desktop}){
+      margin: 200px;
+  }
+`;
+
+export const ProfileContainer = styled.div`
+  @media (${breakpoints.desktop}){
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+  }
 `;
 
 export const InputValues = styled.div``;
@@ -139,25 +144,24 @@ export const InputValues = styled.div``;
 export const TextPassword = styled.h5`
   margin-top: 10px;
   margin-left: 10px;
+  font-size: 15px;
+  font-family: ${colors.Primary};
+  line-height: 50px;
 `;
 
 export const ButtonText = styled.h6`
   margin-top: 10px;
   margin-left: 10px;
   position: center;
+  font-size: 15px;
+  font-family: ${colors.Primary};
 `;
 
 export const InputFill = styled.div``;
 
-export const TopRightButton = styled.div``;
 
-export const TopRightButtonOut = styled.div`
-  position: absolute;
-  top: 20%;
-  right: 5%;
-  border: 1px solid ${colors.Primary};
-  border-radius: 50px;
-`;
+
+
 
 
 

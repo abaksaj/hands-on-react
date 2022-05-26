@@ -10,7 +10,8 @@ export const colors = {
     BgPrimary: "#ffffff",
     BgSecondary: "#f6fafb",
     TextPrimary: "#333333",
-    TextSecondary: "#696969"
+    TextSecondary: "#696969",
+    middleBox: "#d3d0d0"
 };
 
 export const breakpoints = {

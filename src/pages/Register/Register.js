@@ -89,8 +89,8 @@ const Register= () => {
                                 <ErrorMessage component={"div"} name="password"/>
                             </FormRow>
                             <FormRow>
-                                <Field type="password" name="psswordConfirmed" placeholder="Confirm password..." disabled={formik.isSubmitting}/>
-                                <ErrorMessage component={"div"} name="psswordConfirmed"/> 
+                                <Field type="password" name="passwordConfirmed" placeholder="Confirm password..." disabled={formik.isSubmitting}/>
+                                <ErrorMessage component={"div"} name="passwordConfirmed"/> 
                             </FormRow>
                             <FormRow>
                                 <Field type="text" name="githubUsername" placeholder="Github username..." disabled={formik.isSubmitting}/>
@@ -123,8 +123,7 @@ const Register= () => {
                     </FormWrapper>
                 )}
             </Formik>
-        </Section>  
-        
+        </Section>   
     </>
     );
 };

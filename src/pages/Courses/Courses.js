@@ -51,6 +51,7 @@ const Courses = () => {
                             return course;
                         }
                     }).map(item => <CourseCard 
+                        key={item.id}
                         courseId={item.id}
                         imgSrc={item.imgSrc}
                         imgAlt={item.imgAlt}
